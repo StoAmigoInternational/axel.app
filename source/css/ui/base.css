@@ -1,0 +1,238 @@
+/* -------------------------------------------------- */
+/* COMMON PROPERTIES
+/* -------------------------------------------------- */
+
+#nav-panel, #navbar, #toolbar, #footer, .dropdown-items {
+	user-select: none;
+	
+	-webkit-touch-callout: none;
+	-moz-touch-callout: none;
+	-ms-user-touch-callout: none;
+	touch-callout: none;
+    
+    will-change: auto;
+}
+
+
+/* -------------------------------------------------- */
+/* STACK ORDER (Z-INDEX)
+/* -------------------------------------------------- */
+
+#nav-panel {
+	z-index: 100;
+}
+
+.js-off-canvas-overlay {
+	z-index: 99;
+}
+
+.dropdown-items {
+	z-index: 98;
+}
+
+#navbar,
+#toolbar {
+	z-index: 97;
+}
+
+#sticky-anchor {
+	z-index: 96;
+}
+
+footer {
+	z-index: 0;
+}
+
+
+/* -------------------------------------------------- */
+/* MENU BAR
+/* -------------------------------------------------- */
+
+/* COMMON */
+.menubar {
+	/*overflow: hidden;*/
+	position: relative;
+	/*top: 0;*/
+	width: 100%;
+	
+	/*transition: var(--ease-default);*/
+}
+
+.menubar .cell {
+	position: relative;
+	/*width: 100%;*/
+	/*height: 100%;*/
+}
+
+
+/* -------------------------------------------------- */
+/* LOGO
+/* -------------------------------------------------- */
+
+/* PARENT */
+#navbar-logo a svg,
+#nav-panel-logo a svg {
+	width: 100%;
+	max-width: 120px;
+
+	transform: scale(1);
+}
+
+
+/* PATH */
+#navbar-logo a svg path {
+	fill: var(--white-color);
+}
+
+
+/* HOVER */
+#navbar-logo a svg:hover path {
+	fill: var(--primary-color);
+}
+
+
+/* THEME */
+#navbar.dark .menubar #navbar-logo a svg path {
+	fill: var(--secondary-color);
+}
+#navbar.dark .menubar #navbar-logo a svg:hover path {
+	fill: var(--primary-color);
+}
+
+#navbar.sticky.dark .menubar #navbar-logo a svg path {
+	fill: var(--white-color);
+}
+#navbar.sticky.dark .menubar #navbar-logo a svg:hover path {
+	fill: var(--primary-color);
+}
+
+
+/* STICKY */
+#navbar.sticky .menubar #navbar-logo a svg,
+#nav-panel.sticky .menubar #nav-panel-logo a svg {
+	transform: scale(0.9);
+}
+
+#navbar.sticky .menubar #navbar-logo a svg path {
+	fill: var(--primary-color);
+}
+
+#navbar.sticky .menubar #navbar-logo a svg:hover path,
+#navbar.sticky .menubar #nav-panel-logo a svg:hover path {
+	fill: var(--white-color);
+}
+
+
+/* -------------------------------------------------- */
+/* CALLOUT
+/* -------------------------------------------------- */
+
+/* COMMON */
+#navbar-callout,
+#nav-panel-callout {
+    margin: 0 1rem 0 1rem;
+}
+
+#navbar-callout a,
+#nav-panel-callout a {
+	display: block;
+	margin: 0 auto 0 auto;
+	padding: 0.75rem 1rem 0.75rem 1rem;
+    font-size: 0.875em;
+	font-weight: bold;
+	
+	border-radius: 100px 100px 100px 100px;
+}
+
+
+/* PARENT */
+#navbar-callout a {
+	color: var(--charcoal-color);
+	background-color: var(--primary-color);
+}
+
+#nav-panel-callout a {
+	color: var(--white-color);
+	background-color: var(--secondary-color);
+}
+
+
+/* HOVER */
+#navbar-callout a:hover {
+	color: var(--secondary-color);
+	background-color: var(--white-color);
+}
+
+#nav-panel-callout a:hover {
+	color: var(--secondary-color);
+	background-color: var(--white-color);
+}
+
+
+/* THEME */
+#navbar.dark #navbar-callout a {
+	color: var(--white-color);
+	background-color: var(--secondary-color);
+}
+
+#navbar.dark #navbar-callout a:hover {
+	color: var(--white-color);
+	background-color: var(--primary-color);
+}
+
+
+/* STICKY */
+#navbar.sticky #navbar-callout a {
+	color: var(--white-color);
+	background-color: var(--secondary-color);
+}
+
+#navbar.sticky #navbar-callout a:hover {
+	color: var(--secondary-color);
+	background-color: var(--white-color);
+}
+
+
+/* -------------------------------------------------- */
+/* MENU LABEL
+/* -------------------------------------------------- */
+
+/* PARENT */
+#navbar-label,
+#nav-panel-label {
+    cursor: pointer;
+	color: var(--white-color);
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+
+/* HOVER */
+#navbar-label:hover,
+#nav-panel-label:hover {
+
+}
+
+#navbar-label:hover + .nav-toggle div .hamburger span::before {
+	transform: translateX(0);
+}
+
+#navbar-label:hover + .nav-toggle div .hamburger span::after {
+	transform: translateX(200%);
+}
+
+
+/* THEME */
+#navbar.dark .menubar #navbar-label {
+	color: var(--secondary-color);
+}
+
+#navbar.sticky.dark .menubar #navbar-label {
+	color: var(--white-color);
+}
+
+
+/* STICKY */
+#navbar.sticky #navbar-label {
+	color: var(--white-color);
+}

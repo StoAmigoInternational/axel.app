@@ -1,0 +1,94 @@
+{
+   "person": [
+       
+       {
+           "name": "Tony Tan",
+           "position": "CEO &amp; Chairman",
+		   "bio": "A visionary and philanthropist with a long string of entrepreneurial successes, Tony founded and ran ZCorum, America.net, and ISP Alliance. He built one of the first wholesale Internet Service Providers (ISPs) in the United States, and has a track record of rapidly transforming tiny startups into large, multi-million dollar businesses. Tony held global management positions at First Chicago Bank (now JP Morgan Chase), Securities Counsel, and the YMCA. He's also an avid investor and has driven multiple charitable initiatives both domestically and abroad. Tony carries an MBA in Finance and Marketing from the University of Chicago, an MA in Economics with honors from Western Michigan University, and a CFP certification.",
+           "smallimage": "images/team/small-tony-tan.jpg",
+           "largeimage": "images/team/large-tony-tan.jpg"
+       },
+	   
+       {
+           "name": "Ben Ow",
+           "position": "CTO &amp; President",
+		   "bio": "Ben has a strong history of leading the creation of stunning, industry-shaking technologies. He started and cultivated a one-man operation into a powerhouse computing company that represented brands like Panasonic, Fujitsu, and Acer. He's co-founded several successful businesses, held executive leadership positions in more, and is the mastermind behind ViaCube, the winner of CES's 2006 Best Of Innovation Award. He also completed all course work for the PHD program in Artificial Intelligence at Northwestern University.",
+           "smallimage": "images/team/small-ben-ow.jpg",
+           "largeimage": "images/team/large-ben-ow.jpg"
+       },
+
+       {
+           "name": "Bruce Macdonald",
+           "position": "Lead Blockchain Architect",
+       "bio": "Bruce has many years of full stack software experience, working with everything from internet startups to Fortune 500 companies. These entities include among others the US Navy, Qualcomm, and Raytheon. As a software and architect designer, he played a role in creating ETL pipelines, data imagery and reporting analysis dashboards, big data analytics, and was involved with distributed network design and implementation. He was also responsible for designing and implementing message-based systems using both open and closed source stacks, and distributed multi-tier fault tolerant systems. Bruce did mobile design for Android and iOS, and most recently prototyped dApps for the Ethereum blockchain using client-side packages coupled to the blockchain via Smart Contracts. Bruce graduated from the University of California Berkeley with BA's in Physics and Mathematics and has recently filed provisional and utility patents with the USPTO in the blockchain/crypto and gaming space.",
+           "smallimage": "images/team/small-bruce-macdonald.jpg",
+           "largeimage": ""
+       },
+
+       {
+           "name": "Jeremy Forsberg",
+           "position": "Chief Marketing Officer",
+		   "bio": "Jeremy was co-founder and CEO of the NAVADA Group - a creative agency that worked with some of Europe's most powerful and recognizable brands. He boosted audience engagement for a horse racing brand by over 2,000%, turning it into the top racing brand in the UK. He's best known for leading the award-winning Road Respect campaign, wielding viral content to slash drunk driving incidents. Jeremy is a regular guest on BBC Radio and holds a postgraduate degree from Newcastle University. He also earned a CPE in Law from the University of Northumbria.",
+           "smallimage": "images/team/small-jeremy-forsberg.jpg",
+           "largeimage": "images/team/large-jeremy-forsberg.jpg"
+       },
+
+       {
+           "name": "Lee Eyerman",
+           "position": "VP, Technology and Blockchain",
+       "bio": "Lee is a seasoned entrepreneur, IT professional, and lifelong technologist with expertise in application, web, and database development. Lee started his first company during the dot-com boom and was able to sell the company’s closely held intellectual property to a top software firm. For the past year he has been working on integrating the InterPlanetary File System (IPFS) and Distributed Database (DDB) technologies with Blockchain technology. Lee holds a Bachelor’s degree in Business Administration, a Juris Doctor degree in law, and is completing his Master’s degree in Applied Behaviorism.",
+           "smallimage": "images/team/small-lee-eyerman.jpg",
+           "largeimage": "images/team/large-lee-eyerman.jpg"
+       },
+
+	   {
+           "name": "Dave Kaplan",
+           "position": "General Counsel",
+		   "bio": "A proven attorney who focuses on the intersection of business, technology, and law. Dave has played a leading role in high-stakes litigation in a broad array of forums, including in many patent matters. He has represented clients such as Volkswagen, Sony, Lenovo, Olympus, Toyota, and GE Healthcare, but also has successfully represented clients against adversaries with much deeper pockets. Dave carries a B.S.E. from the University of Michigan College of Engineering and a law degree from Rutgers University.",
+           "smallimage": "images/team/small-dave-kaplan.jpg",
+           "largeimage": "images/team/large-dave-kaplan.jpg"
+       },
+       
+       {
+           "name": "Rick Stiles",
+           "position": "VP, Product Development",
+		   "bio": "A communications technology veteran with decades of experience, Rick has spearheaded the development of many innovative communications technologies, some of which are commonly used today. He's served as Vice-President of major telecom companies like HyperEdge and NA Communications, and led product development at others. Rick is named in several significant U.S. patents.",
+           "smallimage": "images/team/small-rick-stiles.jpg",
+           "largeimage": "images/team/large-rick-stiles.jpg"
+       },
+
+       {
+           "name": "Jeff Maher",
+           "position": "VP, Communications",
+       "bio": "Jeff is an award-winning journalist and veteran broadcaster spending the last 14 years working in television. Prior to joining AXEL, he was anchor and host of ‘Wake up with the CW’, in Las Vegas, Nevada. Jeff produced hundreds of videos and segments relating to technology and trending stories, and was among the first broadcasters to launch a commercialized YouTube channel. Jeff also spent years working as a reporter and anchor for the NBC affiliates in Albuquerque, New Mexico, and Midland, Texas. His work has been seen on Inside Edition, NBC Nightly, The Today Show, Animal Planet, CNN, and CNBC. Jeff has received top awards over his career from the Associated Press, New Mexico Broadcasters Association, and Society of Professional Journalists. Jeff is a graduate of Metro State University in Denver, Colorado.",
+           "smallimage": "images/team/small-jeff-maher.jpg",
+           "largeimage": "images/team/large-jeff-maher.jpg"
+       },
+
+       {
+           "name": "Diane Zhang",
+           "position": "VP, Finance",
+		   "bio": "With an excellent undergraduate academic record, Diane was offered a research assistantship to pursue graduate studies at The University of Cincinnati. She graduated with an MA in Economics and then pursued her passion for accounting and finance. A Certified Public Account (CPA) since 2006, Diane has accumulated years of hands-on experience in finance and accounting through working for public and private companies across a variety of different industries.",
+           "smallimage": "images/team/small-diana-zhang.jpg",
+           "largeimage": "images/team/large-diana-zhang.jpg"
+       },
+       
+       {
+           "name": "Dmitry Kogosov",
+           "position": "VP, Operations",
+		   "bio": "Retail. Mortgage Banking. Tech. Dmitry has supervised teams in all these fields, and many more besides. At IngramMicro, he handled clients like Dell and other national brands. His specialty is pulling people together from different parts of the world, each with their own time and language and culture - and creating a cohesive team focused on a singular goal. Dmitry is a graduate of the State University of New York at Buffalo, with dual majors in Political Science and Economics.",
+           "smallimage": "images/team/small-dmitry-kogosov.jpg",
+           "largeimage": "images/team/large-dmitry-kogosov.jpg"
+       },
+       
+       {
+		   "name": "Dmytro Ashkinazi",
+           "position": "Director, European Operations",
+		   "bio": "Veteran entrepreneur and software specialist. Dmytro founded, built, and sold Dneper and iDom, two European tech companies. He's spent years in IT consulting, helping businesses develop incredible technologies. He brings with him a strong business skill set and vast technical acumen that are born of his experience working in some of the world's best-known tech giants. Dmytro holds a Master's degree from Dnipropetrosvk National University in Software Development.",
+           "smallimage": "images/team/small-dmytro-ashkinazi.jpg",
+           "largeimage": "images/team/large-dmytro-ashkinazi.jpg"
+       }
+
+
+   ]
+}

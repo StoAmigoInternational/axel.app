@@ -1,0 +1,143 @@
+/* -------------------------------------------------- */
+/* SCROLL HINT
+/* -------------------------------------------------- */
+
+/* COMMON */
+.scroll-hint .mouse,
+.scroll-hint .mouse .scroll-tick,
+.scroll-hint p {
+	transition: var(--ease-default);
+} 
+
+
+/* PARENT */
+.scroll-hint {
+	left: 0;
+	right: 0;
+	bottom: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	background-color: var(--white-color);
+}
+
+
+/* MOUSE */
+.scroll-hint .mouse {
+	position: relative;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto 0 auto;
+	width: 22px;
+	height: 35px;
+	border-radius: 15px;
+	border: 2px solid var(--secondary-color);
+
+	animation: animMouse 0.5s linear;
+}
+
+.scroll-hint .mouse .scroll-tick {
+	display: block;
+	width: 4px;
+	height: 4px;
+	margin: 0.25rem auto 0 auto;
+	border-radius: 4px;
+	background-color: var(--secondary-color);
+
+	animation: animScroll 1s linear infinite;
+	animation-direction: normal;
+}
+
+
+/* LABEL */
+.scroll-hint p {
+	position: relative;
+	bottom: 0;
+	margin: 0.25rem 0 0.25rem 0;
+	padding: 0 0 0 0;
+	color: var(--secondary-color);
+	font-size: 0.875em;
+	text-align: center;
+}
+
+
+/* HOVER */
+.scroll-hint:hover .mouse {
+	border: 2px solid var(--accent-color);
+	background-color: var(--accent-color);
+} 
+
+.scroll-hint:hover .mouse .scroll-tick {
+	background-color: var(--white-color);
+}
+
+.scroll-hint:hover p {
+	color: var(--accent-color);
+}
+
+
+/* HELPERS */
+.scroll-hint.reverse .mouse .scroll-tick {
+	animation-direction: reverse;
+}
+
+
+/* ANIMATION */
+@keyframes animMouse {
+
+  0% {
+	opacity: 0;
+	transform: translate3d(0, 40px, 0);
+  }
+
+  100% {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+  }
+
+}
+
+@keyframes animScroll {
+
+  0% {
+	opacity: 1;
+  }
+
+  100% {
+	opacity: 0;
+	transform: translate3d(0, 20px, 0);
+  }
+
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 414px) {
+
+	/* PARENT */
+	.scroll-hint {
+		bottom: 5em;
+	}
+
+}
+
+@media screen and (min-width: 0) and (max-width: 320px) {
+
+	/* PARENT */
+	.scroll-hint {
+		bottom: 2em;
+	}
+
+}
+
+@media screen and (min-height: 0) and (max-height: 460px) {
+
+	/* PARENT */
+	.scroll-hint {
+		display: none;
+	}
+
+}

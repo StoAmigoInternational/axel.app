@@ -1,0 +1,179 @@
+/* -------------------------------------------------- */
+/* DEFAULT
+/* -------------------------------------------------- */
+
+/* PARENT */
+ul.list-default {
+
+}
+
+
+/* ITEM */
+ul.list-default li {
+	border-bottom: 1px solid var(--light-grey-color);
+}
+
+ul.list-default li:last-child {
+	border-bottom: none;
+}
+
+ul.list-default li a {
+	/*
+	display: block;
+	margin-left: 1em;
+	text-indent: -1em;
+	*/
+	color: var(--charcoal-color);
+}
+
+ul.list-default li a:hover {
+	color: var(--accent-color);
+}
+
+ul.list-default li a span {
+	display: block;
+	color: var(--secondary-color);
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+ul.list-default li:nth-child(even) {
+	background-color: rgba(0,0,0,0.01);
+}
+
+
+/* PSUEDO */
+ul.list-default li a span::before {
+	content: '\f054';
+	margin-right: 0.5rem;
+	font-family: FontAwesome;
+}
+
+ul.list-default li a span:hover::before {
+	color: inherit;
+}
+
+
+/* -------------------------------------------------- */
+/* NUMBERED
+/* -------------------------------------------------- */
+
+/* PARENT */
+ol.list-number {
+	list-style-type: none;
+}
+
+
+/* ITEM */
+ol.list-number li {
+	counter-increment: item;
+}
+
+
+/* PSUEDO */
+ol.list-number li::before {
+	content: counter(item);
+	float: left;
+	margin-left: -1.5rem;
+	width: 25px;
+	height: 25px;
+	color: var(--charcoal-color);
+	font-family: var(--font-copy);
+	font-size: 1em;
+	line-height: 1.5em;
+	text-align: center;
+	border-radius: 100%;
+	background: var(--light-grey-color);
+}
+
+
+/* -------------------------------------------------- */
+/* POSITIVE CHECK LIST
+/* -------------------------------------------------- */
+
+/* PARENT */
+ul.list-check {
+	list-style-type: none;
+}
+
+
+/* ITEM */
+ul.list-check li {
+
+}
+
+
+/* PSUEDO */
+ul.list-check li::before {
+	content: '\f058';
+	float: left;
+	margin-left: -1.5rem;
+	color: var(--primary-color);
+	font-family: 'FontAwesome';
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+
+
+/* -------------------------------------------------- */
+/* NEGATIVE CHECK LIST
+/* -------------------------------------------------- */
+
+/* PARENT */
+ul.list-negative {
+	list-style-type: none;
+}
+
+
+/* ITEM */
+ul.list-negative li {
+
+}
+
+
+/* PSUEDO */
+ul.list-negative li::before {
+	content: '\f056';
+	float: left;
+	margin-left: -1.5rem;
+	color: var(--dark-grey-color);
+	font-family: 'FontAwesome';
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+
+
+/* -------------------------------------------------- */
+/* DESCRIPTION
+/* -------------------------------------------------- */
+
+dl {
+	
+	
+}
+
+dt {
+	margin-left: 1em;
+	padding-top: 5rem;
+	color: var(--charcoal-color);
+	/*font-family: var(--font-header);*/
+	font-size: 1.125em;
+	text-indent: -1em;
+}
+
+dd {
+	padding-bottom: 1rem;
+	border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+dd:last-child {
+	border-bottom: none;
+}
+
+dt::before {
+	content: '\f054';
+	margin-right: 0.5rem;
+	color: inherit;
+	font-family: FontAwesome;
+	font-size: 0.75em;
+}

@@ -1,0 +1,302 @@
+
+<!-- NAVBAR -->
+<nav id="navbar">
+	
+	{{#ifpage 'copyright' 'eula' 'privacy-policy' 'privacy-bill-of-rights'}}
+	{{> scroll-progress}}
+	{{/ifpage}}
+	
+	<!-- GRID -->
+	<div class="grid-x align-middle menubar">
+		
+		<!-- CELL -->
+		<div id="navbar-logo" class="cell logo">
+			
+			<!-- IMAGE -->
+            <a href="/">
+                
+  				<svg class="display-block padding-lr-sm transition-ease-in-out will-change" preserveAspectRatio="xMidYMid meet" viewBox="0 0 160 90" xmlns="http://www.w3.org/2000/svg">
+					
+					<title>AXEL</title>
+					<rect width="160" height="90" style="fill:none"/>
+					<path d="M70.45,81.42a2.88,2.88,0,0,1-2.61-1.65L58,58.64,48.15,79.75A2.87,2.87,0,1,1,43,77.32L54.83,51.85,39.16,18.25,24.87,48.88H36.31a2.87,2.87,0,0,1,0,5.74H22.19L10.47,79.77a2.87,2.87,0,0,1-5.2-2.43l31.2-66.91a2.84,2.84,0,0,1,1.47-1.58,2.62,2.62,0,0,1,1.22-.27h0a2.73,2.73,0,0,1,1.21.27,2.89,2.89,0,0,1,1.48,1.58L58,45.06,66,28a2.87,2.87,0,1,1,5.2,2.43l-10,21.46L73.05,77.34a2.88,2.88,0,0,1-1.39,3.81A2.76,2.76,0,0,1,70.45,81.42Z"/><path d="M152.13,81.41H122.51a2.87,2.87,0,0,1-2.87-2.86V29.18a2.87,2.87,0,1,1,5.74,0v46.5h26.75a2.87,2.87,0,1,1,0,5.73Z"/><path d="M109.08,81.41H79.46a2.87,2.87,0,1,1,0-5.73h29.62a2.87,2.87,0,1,1,0,5.73Z"/><path d="M109.08,54.62H79.46a2.87,2.87,0,1,1,0-5.74h29.62a2.87,2.87,0,1,1,0,5.74Z"/><path d="M109.08,32.05H79.46a2.87,2.87,0,0,1,0-5.74h29.62a2.87,2.87,0,1,1,0,5.74Z"/>
+					
+				</svg>
+
+            </a>
+			<!-- // IMAGE -->
+
+		</div>
+		<!-- // CELL -->
+
+		<!-- CELL -->
+		<div id="navbar-contents" class="cell auto">
+
+			<!-- ITEMS -->
+			<nav id="navbar-items">
+				
+				<ul class="nav">
+					
+					<li>
+						<a class="dropdown" href="#">Features</a>
+                    
+                        <!-- DROPDOWN -->
+                        <ul class="features subnav">
+
+                            <li class="subnav-tip"><a href="#"></a></li>
+							
+                            {{#each nav.features}}
+							<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}}>{{ title }}</a></li>
+                            {{/each}}
+
+                        </ul>
+                        <!-- // DROPDOWN -->
+                    
+					</li>
+					<li>
+						<a class="dropdown" href="#">Company</a>
+					
+                        <!-- DROPDOWN -->
+                        <ul class="company subnav">
+                            
+                            <li class="subnav-tip"><a href="#"></a></li>
+							
+                            {{#each nav.company}}
+							<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}}>{{ title }}</a></li>
+                            {{/each}}
+                            
+                        </ul>
+                        <!-- // DROPDOWN -->
+					
+                    </li>
+					<li>
+						<a class="dropdown" href="#">Support</a>
+					
+                        <!-- DROPDOWN -->
+                        <ul class="resources subnav">
+                            
+                            <li class="subnav-tip"><a href="#"></a></li>
+							
+                            {{#each nav.resources}}
+							<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}}>{{ title }}</a></li>
+                            {{/each}}
+                            
+                        </ul>
+                        <!-- // DROPDOWN -->
+					
+                    </li>
+
+					{{#each nav.links}}
+					<li class="{{ classes }}"><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}}>{{ title }}</a></li>
+					{{/each}}
+
+				</ul>
+      
+			</nav>
+			<!-- // ITEMS -->
+    
+		</div>
+		<!-- // CELL -->
+		
+		<!-- CELL -->
+		<div id="navbar-callout" class="cell shrink callout">
+			
+			<a href="https://signin.axel.org" class="round-full button external">Sign In / Sign Up<span class="fa fa-long-arrow-right margin-left-xs" aria-hidden="true"></span></a>
+			
+		</div>
+		<!-- // CELL -->
+		
+		<!-- CELL -->
+		<div id="navbar-label" class="cell shrink nav-toggle-label" data-toggle="nav-panel">Menu</div>
+		<!-- // CELL -->
+		
+		<!-- CELL -->
+		<div id="navbar-toggle" class="cell shrink position-relative nav-toggle" data-toggle="nav-panel">
+		
+			<!-- TOGGLE -->
+			<div class="center-vh">
+
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<div class="cross">
+					<span></span>
+					<span></span>
+				</div>
+
+			</div>
+			<!-- // TOGGLE --> 
+
+		</div>
+		<!-- // CELL -->
+		
+	</div>
+	<!-- // GRID -->
+	
+</nav>
+<!-- // NAVBAR -->
+
+
+
+
+	
+<!-- NAV PANEL -->
+<div id="nav-panel" class="off-canvas overflow-y">
+
+	<!--<canvas id="canvas-custom" class="display-block position-absolute overflow-hidden z-auto"></canvas>-->
+	
+	<!-- TOP BAR -->
+	<div class="grid-x align-middle menubar">
+	  
+		<!-- CELL -->
+		<div id="nav-panel-logo" class="cell logo">
+			
+			<!-- IMAGE -->
+            <a href="/" data-toggle="nav-panel">
+				
+				<svg class="display-block padding-lr-sm transition-ease-in-out will-change" preserveAspectRatio="xMidYMid meet" viewBox="0 0 160 90" xmlns="http://www.w3.org/2000/svg">
+					
+					<title>AXEL</title>
+					<rect width="160" height="90" style="fill:none"/>
+					<path d="M70.45,81.42a2.88,2.88,0,0,1-2.61-1.65L58,58.64,48.15,79.75A2.87,2.87,0,1,1,43,77.32L54.83,51.85,39.16,18.25,24.87,48.88H36.31a2.87,2.87,0,0,1,0,5.74H22.19L10.47,79.77a2.87,2.87,0,0,1-5.2-2.43l31.2-66.91a2.84,2.84,0,0,1,1.47-1.58,2.62,2.62,0,0,1,1.22-.27h0a2.73,2.73,0,0,1,1.21.27,2.89,2.89,0,0,1,1.48,1.58L58,45.06,66,28a2.87,2.87,0,1,1,5.2,2.43l-10,21.46L73.05,77.34a2.88,2.88,0,0,1-1.39,3.81A2.76,2.76,0,0,1,70.45,81.42Z" style="fill:#32e14b"/><path d="M152.13,81.41H122.51a2.87,2.87,0,0,1-2.87-2.86V29.18a2.87,2.87,0,1,1,5.74,0v46.5h26.75a2.87,2.87,0,1,1,0,5.73Z" style="fill:#32e14b"/><path d="M109.08,81.41H79.46a2.87,2.87,0,1,1,0-5.73h29.62a2.87,2.87,0,1,1,0,5.73Z" style="fill:#32e14b"/><path d="M109.08,54.62H79.46a2.87,2.87,0,1,1,0-5.74h29.62a2.87,2.87,0,1,1,0,5.74Z" style="fill:#32e14b"/><path d="M109.08,32.05H79.46a2.87,2.87,0,0,1,0-5.74h29.62a2.87,2.87,0,1,1,0,5.74Z" style="fill:#32e14b"/>
+					
+				</svg>
+				
+            </a>
+			<!-- // IMAGE -->
+
+		</div>
+		<!-- // CELL -->
+				
+		<!-- CELL -->
+		<div id="nav-panel-callout" class="cell shrink hide-mobile callout">
+			<a href="https://signin.axel.org" class="round-full button external" data-toggle="nav-panel">Sign In / Sign Up<span class="fa fa-long-arrow-right margin-left-xs" aria-hidden="true"></span></a>
+		</div>
+		<!-- // CELL -->
+
+		<!-- CELL -->
+		<div id="nav-panel-label" class="cell shrink nav-toggle-label" data-toggle="nav-panel">Close</div>
+		<!-- // CELL -->
+		
+		<!-- CELL -->
+		<div id="nav-panel-toggle" class="cell shrink position-relative nav-toggle" data-toggle="nav-panel">
+		
+			<!-- NAV: CLOSE -->
+			<div class="center-vh active">
+
+				<div class="hamburger hide">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<div class="cross">
+					<span></span>
+					<span></span>
+				</div>
+
+			</div>
+			<!-- // NAV: CLOSE --> 
+			
+		</div>
+		<!-- // CELL -->
+		
+		
+	</div>	
+	<!-- // TOP BAR -->
+
+	<!-- CONTENTS -->
+	<div id="nav-panel-contents" class="center-v center-element margin-bottom-lg-mobile">
+			
+   
+            <!-- ITEMS -->
+            <div class="nav-items grid-x align-center align-stretch center-element">
+
+                <!-- CELL -->
+                <div class="cell">
+
+                    <ul class="features nav list-vertical">
+
+						<li class="title font-header">Features</li>
+						
+						{{#each nav.features}}
+						<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}} data-toggle="nav-panel">{{ title }}</a></li>
+						{{/each}}
+						
+                    </ul>	
+
+                </div>
+                <!-- // CELL -->
+
+            </div>
+            <!-- // ITEMS -->
+
+            <!-- ITEMS -->
+            <div class="nav-items grid-x align-center align-stretch center-element border-top border-xxxs border-solid border-white">
+
+                <!-- CELL -->
+                <div class="medium-4 cell">
+
+                    <ul class="company nav list-vertical">
+
+                        <li class="subtitle font-header">Company</li>
+
+						{{#each nav.company}}
+						<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}} data-toggle="nav-panel">{{ title }}</a></li>
+						{{/each}}
+
+                    </ul>	
+
+                </div>
+                <!-- CELL -->
+
+                <!-- CELL -->
+                <div class="medium-4 cell">
+
+                    <ul class="resources nav list-vertical">
+
+                        <li class="subtitle font-header">Support</li>
+ 
+						{{#each nav.resources}}
+						<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}} data-toggle="nav-panel">{{ title }}</a></li>
+						{{/each}}
+
+                    </ul>	
+
+                </div>
+                <!-- // CELL -->
+
+                <!-- CELL -->
+                <div class="medium-4 cell">
+
+                    <ul class="quick-links nav list-vertical">
+
+                        <li class="subtitle font-header">Quick Links</li>
+ 
+						{{#each nav.links}}
+						<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}} data-toggle="nav-panel">{{ title }}</a></li>
+						{{/each}}
+
+                    </ul>	
+
+                </div>
+                <!-- // CELL -->
+
+            </div>
+            <!-- // ITEMS -->
+
+		
+			<!-- SOCIAL -->
+			{{> social-style-01}}
+			<!-- // SOCIAL --> 
+
+		
+	</div>
+	<!-- // CONTENTS -->
+
+ 
+</div>
+<!-- // NAV PANEL -->

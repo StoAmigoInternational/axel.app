@@ -1,0 +1,147 @@
+
+<!-- FOOTER -->
+<footer id="footer" class="position-relative padding-top-xxl padding-bottom-sm padding-top-lg-mobile">
+
+	
+	<!-- ELEMENT: STRIPE -->
+	<!--<div class="padding-top-xxxl width-full height-full position-absolute background-auto background-repeat background-wild background-wiggly-dark z-auto"></div>-->
+	<!-- // ELEMENT: STRIPE -->
+
+
+	<!-- FORM: SIGN IN / SIGN UP -->
+	{{> login}}
+	<!-- // FORM: SIGN IN / SIGN UP -->
+
+
+	<!-- BUTTONS -->
+	<!--<div class="width-xxs center-element text-center">
+		<a href="https://signin.axel.org/index.html" target="_blank" class="p6 text-uppercase round-full button button-fx-primary external">Sign Up for Free</a>
+	</div>-->
+	<!-- BUTTONS -->
+
+	<div class="background-wild background-wiggly-dark">
+
+		<!-- ITEMS -->
+		<div class="nav-items grid-x align-top center-element margin-tb-md width-sm small-up-2 medium-up-4 position-relative z-02" data-equalizer>
+
+
+			<!-- CELL -->
+			<div class="cell">
+
+				<ul class="features nav list-vertical">
+
+					<li class="title font-header">Features</li>
+					
+					{{#each nav.features}}
+					<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}}>{{ title }}</a></li>
+					{{/each}}
+
+				</ul>
+
+			</div>
+			<!-- // CELL -->
+
+
+			<!-- CELL -->     
+			<div class="cell">
+
+				<ul class="company nav list-vertical">
+
+					<li class="title font-header">Company</li>
+
+					{{#each nav.company}}
+					<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}}>{{ title }}</a></li>
+					{{/each}}
+					
+				</ul>	
+
+			</div>
+			<!-- // CELL -->
+
+
+			<!-- CELL -->
+			<div class="cell">
+
+				<ul class="resources nav list-vertical">
+
+					<li class="title font-header">Resources</li>
+
+					{{#each nav.resources}}
+					<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}}>{{ title }}</a></li>
+					{{/each}}
+					
+				</ul>	
+
+			</div>
+			<!-- // CELL -->
+
+
+			<!-- CELL -->
+			<div class="cell">
+
+				<ul class="quick-links nav list-vertical">
+					
+					<li class="title font-header">Quick Links</li>
+					
+					{{#each nav.links}}
+					<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}}>{{ title }}</a></li>
+					{{/each}}
+					
+					{{#each nav.legal}}
+					<li><a class="link-{{ id }}{{ classes }}" href="{{ root }}{{ link }}" {{{ attributes }}}>{{ title }}</a></li>
+					{{/each}}
+					
+					
+				</ul>	
+
+			</div>
+			<!-- // CELL -->
+
+
+		</div>
+		<!-- // ITEMS -->
+
+
+		<!-- ITEMS -->
+		<div class="grid-x align-center align-middle position-relative center-element width-sm border-top border-thin border-solid border-white z-02" data-equalizer>
+
+
+			<!-- CELL -->
+			<div class="medium-3 cell small-order-3 medium-order-1">
+
+				<p class="font-header text-white text-center">&copy; AXEL</p>
+
+			</div>
+			<!-- // CELL -->
+
+
+			<!-- CELL -->
+			<div class="medium-6 cell small-order-2 medium-order-2 margin-tb-sm">
+
+				
+			<!-- SOCIAL -->
+			{{> social-style-02}}
+			<!-- // SOCIAL --> 
+
+				
+			</div>
+			<!-- // CELL -->
+
+
+			<!-- CELL -->
+			<div class="medium-3 cell small-order-1 medium-order-3">
+
+				<p class="padding-top-md-mobile text-center"><a href="#top" class="scroll-to text-white text-light-grey-hover anim-interact" aria-label="Scroll to top."><span class="is-desktop">Top</span><span class="fa fa-space-shuttle fa-rotate-270 position-relative p5 text-center anim-rocket anim-shake" aria-hidden="true"></span></a></p>
+
+			</div>
+			<!-- // CELL -->
+
+
+		</div>
+		<!-- // ITEMS -->
+
+	</div>
+
+
+</footer>
+<!-- // FOOTER -->

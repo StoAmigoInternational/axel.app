@@ -1,0 +1,34 @@
+{
+  "minify": true,
+  "options": [
+    "prefixes",
+    "atRule",
+    "hasEvent",
+    "mq",
+    "prefixed",
+    "prefixedCSS",
+    "prefixedCSSValue",
+    "testAllProps",
+    "html5printshiv",
+    "html5shiv",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/forcetouch",
+    "test/hiddenscroll",
+    "test/css/appearance",
+    "test/css/cssgrid",
+    "test/css/objectfit",
+    "test/css/pointerevents",
+    "test/css/scrollsnappoints",
+    "test/css/will-change",
+    "test/elem/picture",
+    "test/event/deviceorientation-motion",
+    "test/img/jpeg2000",
+    "test/img/jpegxr",
+    "test/img/sizes",
+    "test/img/srcset",
+    "test/img/webp",
+    "test/mediaquery/hovermq"
+  ]
+}

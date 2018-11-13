@@ -1,0 +1,207 @@
+/* -------------------------------------------------- */
+/* RESET
+/* -------------------------------------------------- */
+
+/* DEFAULT */
+form {
+	z-index: 1;
+}
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'], [type='week'],
+[type='email'], [type='number'],
+[type='search'], [type='tel'],
+[type='time'], [type='url'],
+[type='color'], textarea {
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+	color: var(--white-color);
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1em;
+	outline: 0;
+	border: 0;
+	border-radius: 0;
+	background-color: var(--charcoal-color);
+	/*box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0);*/
+
+	/*filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.25));*/
+
+	transition: var(--ease-default);
+
+}
+
+
+/* DEFAULT: FOCUS */
+[type='text']:focus,
+[type='password']:focus,
+[type='date']:focus,
+[type='datetime']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='week']:focus,
+[type='email']:focus,
+[type='number']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='url']:focus,
+[type='color']:focus, textarea:focus {
+
+	/*
+	border: 2px solid var(--primary-color);
+	background-color: #fefefe;
+	box-shadow: 0 0 5px #cacaca;
+	*/
+
+	/*filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.25));*/
+
+	transition: var(--ease-default);
+
+}
+
+
+/* -------------------------------------------------- */
+/* FORM WITH ICON
+/* -------------------------------------------------- */
+
+/* COMMON */
+.field.with-icon[type=text],
+.field.with-icon[type=email],
+.submit.with-icon[type=submit] {
+	text-indent: 1.5em;
+
+	transition: var(--ease-default);
+}
+
+
+/* ICON */
+.field.with-icon[type=text] + span.fa,
+.field.with-icon[type=email] + span.fa,
+.submit.with-icon[type=submit] + span.fa {
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	left: 0.5em;
+	color: var(--dark-grey-color);
+	font-size: 1.5em;
+
+	transform: translateY(-50%);
+	transform-origin: center center;
+
+	transition: var(--ease-default);
+}
+
+
+/* FOCUS */
+.field.with-icon[type=text]:focus,
+.field.with-icon[type=email]:focus,
+.submit.with-icon[type=submit]:focus {
+
+}
+
+.field.with-icon[type=text]:focus + span.fa,
+.field.with-icon[type=email]:focus + span.fa,
+.submit.with-icon[type=submit]:focus + span.fa {
+	color: var(--secondary-color);
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 639px) {
+
+	/* COMMON */
+	.field.with-icon[type=text],
+	.field.with-icon[type=email],
+	.submit.with-icon[type=submit] {
+		text-indent: 0;
+	}
+
+}
+
+
+@media screen and (min-width: 0) and (max-width: 345px) {
+
+	/* COMMON */
+	.field.with-icon[type=text] + span.fa,
+	.field.with-icon[type=email] + span.fa,
+	.submit.with-icon[type=submit] + span.fa {
+		opacity: 0;
+	}
+
+}
+
+
+/* -------------------------------------------------- */
+/* FORM
+/* -------------------------------------------------- */
+
+/* COMMON */
+.field[type=text],
+.field[type=email],
+.submit[type=submit] {
+	margin: 0 0 0 0;
+	padding: 1rem 1rem 1rem 1rem;
+	width: 100%;
+	height: 50px;
+	font-size: 1.24em;
+	line-height: 1em;
+
+	transition: var(--ease-default);
+}
+
+
+/* FIELD */
+.field[type=text],
+.field[type=email] {
+	color: var(--charcoal-color);
+	text-align: left;
+	border: 1px solid var(--dark-grey-color);
+	border-radius: 100px 0 0 100px;
+	background-color: var(--white-color);
+}
+
+	/* FOCUS */
+	.field[type=text]:focus,
+	.field[type=email]:focus {
+		border: 2px solid var(--secondary-color);
+	}
+
+
+/* SUBMIT */
+.submit[type=submit] {
+	cursor: pointer;
+	color: var(--white-color);
+	font-weight: bold;
+	border: 0;
+	border-radius: 0 100px 100px 0;
+	background-color: var(--accent-color);
+}
+
+	/* HOVER */
+	.submit[type=submit]:hover {
+		background-color: var(--primary-color); 
+	}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 639px) {
+
+	/* FIELD */
+	.field[type=text],
+	.field[type=email] {
+		text-align: center;
+		border-radius: 25px 25px 0 0; 
+	}
+
+
+	/* SUBMIT */
+	.submit[type=submit] {
+		border-radius: 0 0 25px 25px; 
+	}
+
+}

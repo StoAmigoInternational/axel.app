@@ -1,0 +1,377 @@
+/*removeIf(production)*/
+
+:root {
+
+	/* -------------------------------------------------- */
+	/* COPY
+	/* -------------------------------------------------- */	
+
+	--font-header: 'Comfortaa', cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, Ubuntu, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-subheader: 'Comfortaa', cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, Ubuntu, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-heavy: 'Comfortaa', cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, Ubuntu, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-copy: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, Ubuntu, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-alt: 'Roboto', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, Ubuntu, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, Ubuntu, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+
+	/* -------------------------------------------------- */
+	/* COLORS
+	/* -------------------------------------------------- */
+
+		/* -------------------------------------------------- */
+		/* HEX
+		/* -------------------------------------------------- */
+
+		/* THEME */
+		--primary-color: #32e14b;
+		--secondary-color: #6400fa;
+		--accent-color: #fa6432;
+		--wild-color: #001932;
+		--one-off-color: #fa0096;
+
+
+		/* STATUS */
+		--ok-color: #0f0;
+		--error-color: #f00;
+		--warning-color: #fc0;
+
+
+		/* COMMON */
+		--white-color: #fff;
+		--light-grey-color: #ddd;
+		--dark-grey-color: #999;
+		--charcoal-color: #333;
+		--black-color: #000;
+
+
+		/* -------------------------------------------------- */
+		/* RGBA
+		/* -------------------------------------------------- */
+
+		/* THEME */
+		--primary-color-rgba: rgba(50,225,75,1);
+		--secondary-color-rgba: rgba(100,0,250,1);
+		--accent-color-rgba: rgba(250,100,50,1);
+		--wild-color-rgba: rgba(0,25,50,1);
+		--one-off-color-rgba: rgba(250,0,150,1);
+
+
+		/* STATUS */
+		--ok-color-rgba: rgba(0,250,0,1);
+		--error-color-rgba: rgba(250,0,0,1);
+		--warning-color-rgba: rgba(250,225,0,1);
+
+
+		/* COMMON */
+		--white-color-rgba: rgba(255,255,255,1);
+		--light-grey-color-rgba: rgba(225,225,225,1);
+		--dark-grey-color-rgba: rgba(150,150,150,1);
+		--charcoal-color-rgba: rgba(50,50,50,1);
+		--black-color-rgba: rgba(25,25,25,1);
+
+
+	/* -------------------------------------------------- */
+	/* LAYOUT
+	/* -------------------------------------------------- */
+
+		/* -------------------------------------------------- */
+		/* SECTION or ARTICLE
+		/* -------------------------------------------------- */
+
+		/* MARGINS */
+		--section-margin: 0px auto 0px auto;
+
+
+		/* PADDING */
+		--section-padding: 2rem 0px 2rem 0px;
+
+
+		/* RESPONSIVE */
+
+			/* MARGINS */
+			--section-margin-mobile: 0px auto 0px auto;
+
+
+			/* PADDING */
+			--section-padding-mobile: 2rem 0px 2rem 0px;
+
+
+		/* -------------------------------------------------- */
+		/* GRID CELL
+		/* -------------------------------------------------- */
+
+		/* XY */
+		--cell-padding-top: 4rem;
+		--cell-padding-left: 2rem;
+		--cell-padding-bottom: 4rem;
+		--cell-padding-right: 2rem;
+
+
+		/* HELPERS */
+		--margin-top-auto: 0px;
+		--margin-left-auto: auto;
+		--margin-bottom-auto: 0px;
+		--margin-right-auto: auto;
+
+		--padding-top-auto: 4rem;
+		--padding-left-auto: 1rem;
+		--padding-bottom-auto: 2rem;
+		--padding-right-auto: 1rem;
+
+
+		/* RESPONSIVE */
+		--cell-padding-top-mobile: 4rem;
+		--cell-padding-left-mobile: 2rem;
+		--cell-padding-bottom-mobile: 4rem;
+		--cell-padding-right-mobile: 2rem;
+
+
+		--margin-top-auto-mobile: 0px;
+		--margin-left-auto-mobile: auto;
+		--margin-bottom-auto-mobile: 0px;
+		--margin-right-auto-mobile: auto;
+
+		--padding-top-auto-mobile: 4rem;
+		--padding-left-auto-mobile: 1rem;
+		--padding-bottom-auto-mobile: 1rem;
+		--padding-right-auto-mobile: 1rem;
+
+
+
+	/* -------------------------------------------------- */
+	/* SIZES
+	/* -------------------------------------------------- */
+
+		/* -------------------------------------------------- */
+		/* WIDTH
+		/* -------------------------------------------------- */
+
+		--width-min: 50px;
+
+		--width-xxxs: 250px;
+
+		--width-xxs: 480px;
+
+		--width-xs: 800px;
+
+		--width-sm: 1024px;
+
+		--width-md: 1280px;
+
+		--width-lg: 1440px;
+
+		--width-xl: 1600px;
+
+		--width-xxl: 1920px;
+
+		--width-xxxl: 2560px;
+
+
+		/* -------------------------------------------------- */
+		/* HEIGHT
+		/* -------------------------------------------------- */	
+
+		--height-min: 25px;
+
+		--height-xxxs: 250px;
+
+		--height-xxs: 320px;
+
+		--height-xs: 600px;
+
+		--height-sm: 720px;
+
+		--height-md: 768px;
+
+		--height-lg: 900px;
+
+		--height-xl: 1050px;
+
+		--height-xxl: 1080px;
+
+		--height-xxxl: 1600px;
+
+
+		/* -------------------------------------------------- */
+		/* EQUAL WIDTH / HEIGHT
+		/* -------------------------------------------------- */	
+
+		--size-generic-xxxs: 50px;
+
+		--size-generic-xxs: 75px;
+
+		--size-generic-xs: 100px;
+
+		--size-generic-sm: 150px;
+
+		--size-generic-md: 200px;
+
+		--size-generic-lg: 250px;
+
+		--size-generic-xl: 300px;
+
+		--size-generic-xxl: 350px;
+
+		--size-generic-xxxl: 400px;
+
+
+	/* -------------------------------------------------- */
+	/* MARGIN / PADDING / SPACING
+	/* -------------------------------------------------- */	
+
+		/* -------------------------------------------------- */
+		/* ALL
+		/* -------------------------------------------------- */	
+
+		--gutter-xxxs: 0.25rem 0.25rem 0.25rem 0.25rem;
+
+		--gutter-xxs: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+		--gutter-xs: 0.75rem 0.75rem 0.75rem 0.75rem;
+
+		--gutter-sm: 1rem 1rem 1rem 1rem;
+
+		--gutter-md: 2rem 2rem 2rem 2rem;
+
+		--gutter-lg: 4rem 4rem 4rem 4rem;
+
+		--gutter-xl: 6rem 6rem 6rem 6rem;
+
+		--gutter-xxl: 8rem 8rem 8rem 8rem;
+
+		--gutter-xxxl: 16rem 16rem 16rem 16rem;
+
+
+		/* -------------------------------------------------- */
+		/* SINGLE
+		/* -------------------------------------------------- */	
+
+		--gutter-single-xxxs: 0.25rem;
+
+		--gutter-single-xxs: 0.5rem;
+
+		--gutter-single-xs: 0.75rem;
+
+		--gutter-single-sm: 1rem;
+
+		--gutter-single-md: 2rem;
+
+		--gutter-single-lg: 4rem;
+
+		--gutter-single-xl: 6rem;
+
+		--gutter-single-xxl: 8rem;
+
+		--gutter-single-xxxl: 16rem;
+
+
+	/* -------------------------------------------------- */
+	/* TEXT
+	/* -------------------------------------------------- */
+
+		/* -------------------------------------------------- */
+		/* LETTER SPACING
+		/* -------------------------------------------------- */
+
+		--text-letter-spacing-xxxs: 0.125rem;
+
+		--text-letter-spacing-xxs: 0.25rem;
+
+		--text-letter-spacing-xs: 0.5rem;
+
+		--text-letter-spacing-sm: 0.75rem;
+
+		--text-letter-spacing-md: 1rem;
+
+		--text-letter-spacing-lg: 1.25rem;
+
+		--text-letter-spacing-xl: 1.5rem;
+
+		--text-letter-spacing-xxl: 1.75rem;
+
+		--text-letter-spacing-xxxl: 2rem;
+
+
+		/* -------------------------------------------------- */
+		/* LINE HEIGHT
+		/* -------------------------------------------------- */
+
+		--text-leading-xxxs: 1em;
+
+		--text-leading-xxs: 1.25em;
+
+		--text-leading-xs: 1.5em;
+
+		--text-leading-sm: 1.75em;
+
+		--text-leading-md: 2em;
+
+		--text-leading-lg: 2.25em;
+
+		--text-leading-xl: 2.5em;
+
+		--text-leading-xxl: 2.75em;
+
+		--text-leading-xxxl: 3em;
+
+
+	/* -------------------------------------------------- */
+	/* RADIUS
+	/* -------------------------------------------------- */
+
+	--radius-xxxs: 2px;
+
+	--radius-xxs: 4px;
+
+	--radius-xs: 6px;
+
+	--radius-sm: 8px;
+
+	--radius-md: 10px;
+
+	--radius-lg: 12px;
+
+	--radius-xl: 14px;
+
+	--radius-xxl: 16px;
+
+	--radius-xxxl: 18px;
+	
+	--radius-full: 100px;
+
+
+	/* -------------------------------------------------- */
+	/* BORDER
+	/* -------------------------------------------------- */
+
+	--border-xxxs: 1px;
+
+	--border-xxs: 2px;
+
+	--border-xs: 3px;
+
+	--border-sm: 4px;
+
+	--border-md: 5px;
+
+	--border-lg: 6px;
+
+	--border-xl: 7px;
+
+	--border-xxl: 8px;
+
+	--border-xxxl: 9px;
+
+
+	/* -------------------------------------------------- */
+	/* ANIMATIONS
+	/* -------------------------------------------------- */
+
+	--ease-default: all 0.25s ease;
+	--ease-in: all 0.25s ease-in;
+	--ease-out: all 0.25s ease-out;
+	--ease-in-out: all 0.25s ease-in-out;
+
+}
+
+/*endRemoveIf(production)*/

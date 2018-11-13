@@ -1,0 +1,37 @@
+August 13, 2018
+Version 1.2.3
+	- Replaced stoamigo.com links with axel.org.
+	- Updated meta tags to axel.org.
+	- Implemented IntersectionObserver with proper fallback for unsupported browsers.
+	- If IntersectionObserver API is unavailable, website will fallback to lazy-load method.
+	- Fixed memory leak with images duplicating multiple times on every scroll tick.
+	- General optimizations and fixes.
+	- Updated config.json, browserconfig, and manifest to reflect domain change.
+
+
+
+
+
+August 09, 2018
+Version 1.2.2
+	- Image assets are now in 'Next-gen' format. Detection and fallbacks implemented for browsers with no support for these formats.
+	- Improved webp detection.
+	- Incorporated caniuse.com data for improved feature detection.
+	- Tweaked animation timing and responsiveness of micro-interactions.
+	- Tweaked global animation timing and easing.
+	- Corrected some inconsistencies with copy.
+	- Fixed rare occurence of animations not firing when in viewport.
+	- Fixed download links to Windows and macOS desktop app.
+	- Removed unused CSS properties.
+	- Removed unused JS functions (dead code).
+	- Reduced CSS and JS file size.
+	- Added a loading message to Careers page.
+	- Deferred loading of Recooty widget on Careers page.
+	- Temporarily removed IntersectionObserver API until better cross-browser support is implemented.
+	- Implemented AWS to push content to S3 Bucket.
+	- Improved BrowserSync response times.
+	- Implemented versioning and cache-busting methods in build tools.
+	- Improved Service Worker implementation and caching methods.
+	- Additional options added to config.json.
+		- Added options to open a preview at build completion.
+		- Added commands to open project, source and build folder.

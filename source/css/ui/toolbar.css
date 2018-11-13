@@ -1,0 +1,79 @@
+/* -------------------------------------------------- */
+/* TOOLBAR
+/* -------------------------------------------------- */
+
+/* PARENT */
+#toolbar {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid rgba(75,75,75,0);
+	background-color: rgba(50,50,50,1);
+}
+
+
+/* ITEM */
+#toolbar #toolbar-contents {
+    position: relative;
+}
+
+#toolbar #toolbar-contents .cell {
+    height: 100%;
+}
+
+#toolbar #toolbar-contents .cell a {
+    display: table;
+    height: 100%;
+    color: var(--white-color);
+    font-size: 1em;
+}
+
+#toolbar #toolbar-contents .cell a div {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#toolbar #toolbar-contents .cell a div .fa {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: auto;
+    
+    transform: translate(0,0)
+}
+
+#toolbar #toolbar-contents .cell a div span {
+
+}
+
+
+/* STICKY */
+#toolbar.sticky {
+	border-top: 1px solid rgba(50,50,50,1);
+}
+
+#toolbar.sticky #toolbar-contents {
+
+}
+
+#toolbar.sticky #toolbar-contents .cell {
+
+}
+
+#toolbar.sticky #toolbar-contents .cell a {
+	color: var(--white-color);
+}
+
+#toolbar.sticky #toolbar-contents .cell a div {
+
+}
+
+#toolbar.sticky #toolbar-contents .cell a div .fa {
+
+}
+
+#toolbar.sticky #toolbar-contents .cell a div span {
+
+}

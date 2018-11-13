@@ -1,0 +1,8 @@
+Sitemap: https://axel.org/sitemap.xml
+
+User-agent: *
+Disallow: /assets
+Disallow: /fonts
+Disallow: /images
+Disallow: /modals
+Disallow: /scripts

@@ -1,0 +1,76 @@
+
+<!-- HERO -->
+<div id="welcome" class="hero grid-x grid-padding-x align-center align-middle position-relative fullscreen text-center background-tc background-cover background-no-repeat background-secondary overflow-hidden no-selection emergence-ignore" data-emergence="hidden" role="banner">
+	
+
+	<!-- BACKGROUND: GRADIENT -->
+	<!--<canvas id="background-gradient" class="anim-gradient-background position-absolute width-full height-full z-auto"></canvas>-->
+	<!-- // BACKGROUND: GRADIENT -->
+	
+
+	
+	
+	
+	<!-- BACKGROUND: IMAGE -->
+	<div class="position-absolute top left width-full height-full overflow-hidden z-auto">
+		<div class="position-absolute top left width-full height-full background-cover background-tr background-tc-tablet background-no-repeat lazy"
+			 data-src="{{ root }}{{ images }}{{ page }}/hero@2x.png"
+			 data-srcset="{{ root }}{{ images }}{{ page }}/hero@1x.png 220w,
+						  {{ root }}{{ images }}{{ page }}/hero@2x.png 330w"
+			 data-sizes="220px">
+		</div>
+	</div>
+	<!-- // BACKGROUND: IMAGE -->
+
+
+
+
+
+	<!-- BACKGROUND: SCROLLING PATTERN -->
+	<!--
+	<div class="anim-perspective-scroll anim position-absolute top left width-full height-full overflow-hidden z-auto hide">
+		<div class="position-absolute width-full height-full background-contain background-repeat" data-image="{{ root }}{{ images }}{{ page }}/hero.png"></div>
+	</div>
+	-->
+	<!-- // BACKGROUND: SCROLLING PATTERN -->
+
+
+	
+	
+
+	<!-- ELEMENT: STRIPE -->
+	<div class="stripe stripe-bottom position-absolute background-white z-auto hide-landscape-mobile"></div>
+	<!-- // ELEMENT: STRIPE -->
+	
+
+	
+	
+	
+	<!-- HEADER -->
+	<header class="cell height-three-quarters-mobile overflow-hidden">
+
+		<!-- COPY -->
+        <h1 class="font-header fix-font-render">Take Back Control</h1>
+        <p class="font-header fix-font-render">Access, share, transfer without limits.</p>
+		<!-- // COPY -->
+
+		
+		<!-- BUTTONS -->
+		<!--<a href="https://signin.axel.org/index.html" target="_blank" class="margin-tb-md p6 text-uppercase round-full button button-fx-accent button-fx-flat external">Sign Up for Free</a>-->
+		<!-- // BUTTONS -->
+
+		
+		<!-- FORM: SIGN IN / SIGN UP -->
+		{{> login}}
+		<!-- // FORM: SIGN IN / SIGN UP -->
+
+		
+		{{> scroll-hint}}
+		
+		
+	</header>
+	<!-- // HEADER -->
+	
+	
+</div>
+<!-- // HERO -->

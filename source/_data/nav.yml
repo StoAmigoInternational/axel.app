@@ -1,0 +1,134 @@
+
+# FEATURES
+features:
+ -
+  id: sharing
+  link: sharing
+  title: Sharing
+  classes: ''
+  attributes: ''
+ -
+  id: access
+  link: access
+  title: Access
+  classes: ''
+  attributes: ''
+ -
+  id: security
+  link: security
+  title: Security & Privacy
+  classes: ''
+  attributes: ''
+ -
+  id: transfer
+  link: transfer
+  title: Transfer
+  classes: ''
+  attributes: ''
+ -
+  id: streaming
+  link: streaming
+  title: Streaming
+  classes: ''
+  attributes: ''
+ -
+  id: integration
+  link: integration
+  title: Integration
+  classes: ''
+  attributes: ''
+
+
+# COMPANY
+company:
+ -
+  id: about
+  link: about
+  title: About
+  classes: ''
+  attributes: ''
+ -
+  id: team
+  link: team
+  title: Team
+  classes: ''
+  attributes: ''
+ -
+  id: press
+  link: press
+  title: Press
+  classes: ''
+  attributes: ''
+ -
+  id: careers
+  link: careers
+  title: Careers
+  classes: ''
+  attributes: ''
+ -
+  id: contact
+  link: contact
+  title: Contact Us
+  classes: ''
+  attributes: ''
+
+
+# RSESOURCES
+resources:
+ -
+  id: help-center
+  link: https://help.axel.org
+  title: Help Center
+  classes: ' external'
+  attributes: target="_blank"
+ -
+  id: faq
+  link: faq
+  title: FAQ
+  classes: ''
+  attributes: ''
+  
+
+# LINKS 
+links:
+ -
+  id: plans
+  link: plans
+  title: Plans
+  classes: ' remove'
+  attributes: ''
+ -
+  id: download
+  link: download
+  title: Download
+  classes: ''
+  attributes: ''
+ -
+  id: blog
+  link: https://medium.com/@axelunlimited
+  title: Blog
+  classes: ' external remove'
+  attributes: target="_blank"
+ -
+  id: axel-token
+  link: https://axeltoken.com
+  title: AXEL Token
+  classes: ' external'
+  attributes: target="_blank"
+  
+
+# LEGAL
+legal:
+ -
+  id: privacy-policy
+  link: privacy-policy
+  title: Privacy & Terms
+  classes: ' '
+  attributes: ''
+ -
+  id: eula
+  link: eula
+  title: EULA
+  classes: ''
+  attributes: ''
+  

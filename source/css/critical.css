@@ -1,0 +1,193 @@
+/* -------------------------------------------------- */
+/* SET-UP
+/* -------------------------------------------------- */
+
+/* Note: Scrolling is still active. This will only hide the scrollbar. */
+/*
+html {
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+*/
+
+:root {
+
+	/* -------------------------------------------------- */
+	/* ROOT LEVEL UNITS
+	/* -------------------------------------------------- */
+
+	font-size: 16px; /* Set a base level 'font-size' for entire document. */
+	letter-spacing: 0; /* Set a base level 'letter-spacing' for entire document. */
+	line-height: 1.5; /* Set a base level unit-less 'line-height' for entire document. */
+
+}
+
+html, body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	min-height: 100%; /* Careful with this. Unexpected results in Safari. */
+	background-color: #333;
+
+	/*-webkit-overflow-scrolling: touch;
+	touch-action: none;*/
+}
+
+#container  {
+	opacity: 0;
+	/*visibility: hidden;*/ /* Causes stylized scrollbar to not appear on page load. */
+	/*display: none;*/ /*Potentially prevents iOS Reader from rendering text.*/
+}
+
+#nav-panel, #navbar, #toolbar  {
+	opacity: 0;
+	display: none;
+	/*visibility: hidden;*/ /* Causes stylized scrollbar to not appear on page load. */
+	/*display: none;*/ /*Potentially prevents iOS Reader from rendering text.*/
+}
+
+#preloader {
+	opacity: 0;
+	display: none;
+}
+
+
+/* -------------------------------------------------- */
+/* PRELOADER
+/* -------------------------------------------------- */
+
+/* PARENT */
+#preloader {
+	cursor: default;
+	pointer-events: none;
+	z-index: 99;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	min-height: 100%;
+	background-color: #333;
+}
+
+
+/* CHILD */
+#preloader > ul {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	text-align: center;
+	list-style-image: none;
+	list-style-type: none;
+	background-color: transparent;
+
+	transform: translate(-50%,-50%);
+}
+
+
+/* ITEM */
+#preloader > ul > li > svg {
+	width: 100%;
+	max-width: 200px;
+}
+
+
+/* -------------------------------------------------- */
+/* ERROR: JS DISABLED
+/* -------------------------------------------------- */
+
+/* PARENT */
+noscript {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+}
+
+noscript div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0 0 0 0;
+	padding: 1rem 1rem 1rem 1rem;
+	width: 100%;
+	max-width: 300px;
+	color: #fff;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-size: 0.875em;
+	text-align: center;
+	background-color: #333;
+
+	transform: translate(-50%,-50%);
+}
+
+noscript div img { 
+	display: block;
+}
+
+noscript div span {
+	color: #fff;
+	font-weight: bold;
+}
+
+
+/* -------------------------------------------------- */
+/* ERROR: WINDOW RESIZE
+/* -------------------------------------------------- */
+
+/* PARENT */
+#error {
+	z-index: -1;
+    overflow: hidden;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	min-height: 100%;
+    background-color: #333;
+}
+
+
+/* CHILD */
+#error p {
+    display: block;
+	position: absolute;
+	top: 50%;
+    left: 50%;	
+    padding: 0 0.75rem 0 0.75rem;
+    width: 100%;
+    color: #fff;
+    font-size: 1.25em;
+    text-align: center;
+    
+	transform: translate(-50%,-50%);
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 319px), screen and (min-height: 0) and (max-height: 374px) {
+	
+	/* PARENT */
+	/*
+	#error {
+		z-index: 9999;
+		display: block;
+	}
+	*/
+
+}

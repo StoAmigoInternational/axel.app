@@ -1,0 +1,71 @@
+/* -------------------------------------------------- */
+/* ACCORDION
+/* -------------------------------------------------- */
+
+/* PARENT */
+ul.accordion {
+	background: none;
+}
+
+
+/* ITEM */
+ul.accordion > li.accordion-item {
+
+}
+
+ul.accordion > li.accordion-item:first-child > :first-child {
+	border-radius: 10px 10px 0 0;
+}
+
+
+/* TITLE */
+ul.accordion > li.accordion-item a.accordion-title {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 2rem;
+	color: var(--charcoal-color);
+	font-size: 1em;
+	border-bottom: 1px solid var(--light-grey-color);
+	background-color: var(--white-color);
+	
+	/*transition: var(--ease-default);*/
+}
+
+ul.accordion > li.accordion-item a.accordion-title::before {
+	content: '\f067';
+	color: var(--charcoal-color);
+	font-family: 'FontAwesome';
+	font-size: 0.75em;
+}
+
+ul.accordion > li.accordion-item:last-child:not(.is-active) > a.accordion-title {
+	border-radius: 0 0 10px 10px;
+}
+
+
+/* CONTENT */
+ul.accordion > li.accordion-item > .accordion-content {
+	padding: 4rem 2rem 4em 2rem;
+	background-color: var(--white-color);
+	
+	/*transition: var(--ease-default);*/
+}
+
+ul.accordion > li.accordion-item > .accordion-content p {
+	color: var(--charcoal-color);
+	font-size: 1em;
+}
+
+
+/* ACTIVE */
+ul.accordion > li.accordion-item.is-active a.accordion-title {
+	color: var(--white-color);
+	font-size: 1em;
+	background-color: var(--secondary-color);
+}
+
+ul.accordion > li.accordion-item.is-active a.accordion-title::before {
+	content: '\f068';
+	color: var(--white-color);
+}

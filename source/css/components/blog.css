@@ -1,0 +1,200 @@
+/* -------------------------------------------------- */
+/* BLOG
+/* -------------------------------------------------- */
+
+/* PARENT */
+#blog {
+
+}
+
+
+/* CHILD */
+#blog #blog-content {
+	width: 100%;
+	max-width: 1200px;
+}
+
+
+/* ITEM */
+#blog #blog-content .cell {
+	overflow: hidden;
+	position: relative;
+	padding: 0 0 0 0;
+	height: 100%;
+	border: thin solid var(--light-grey-color);
+	border-radius: 6px 6px 6px 6px;
+	background-color: var(--white-color);
+
+	
+box-shadow: 0 4px 5px 0 rgba(0,0,0,0.06),
+			  0 1px 10px 0 rgba(0,0,0,0.04),
+			  0 2px 4px -1px rgba(0,0,0,0.08);
+	
+}
+
+
+/* HEADER */
+#blog #blog-content .cell header {
+
+}
+
+#blog #blog-content .cell header span.date {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	font-size: 0.875em;
+	line-height: 1em;
+	border-radius: 6px 6px 6px 6px;
+	background-color: var(--white-color);
+}
+
+
+/* IMAGE */
+#blog #blog-content .cell header figure {
+
+}
+
+#blog #blog-content .cell header figure .post-image {
+	width: 100%;
+	height: 200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+/* CONTENT*/
+#blog #blog-content .cell .post-content {
+	position: relative;
+	bottom: 0;
+	padding: 1rem 1rem 0.5rem 1rem;
+	height: 100%;
+	min-height: 250px;
+}
+
+#blog #blog-content .cell .post-content h4 {
+	margin: 0 0 0 0;
+	color: var(--secondary-color);
+	font-size: 1em;
+}
+
+#blog #blog-content .cell .post-content h4 a {
+
+}
+
+#blog #blog-content .cell .post-content h4:hover a {
+	color: var(--accent-color);
+}
+
+
+/* META */
+#blog #blog-content .cell .post-content .post-meta {
+
+}
+
+#blog #blog-content .cell .post-content .post-meta .post-author {
+	color: var(--dark-grey-color);
+	font-size: 1em;
+}
+
+
+/* BUTTON */
+#blog #blog-content .cell .post-content a.button {
+	display: block;
+	position: absolute;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	bottom: 0;
+	margin: 0 auto 0 auto;
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 639px) {
+
+	/* ITEM */
+	#blog #blog-content .cell:first-child {
+		border-top: thin solid var(--light-grey-color);
+	}
+
+	#blog #blog-content .cell {
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+		width: 100%;
+		height: 150px;
+		border-radius: 0;
+		border-top: none;
+		border-left: none;
+		border-bottom: thin solid var(--light-grey-color);
+		border-right: none;
+
+		box-shadow: none;
+	}
+
+
+	/* HEADER */
+	#blog #blog-content .cell header {
+		float: left;
+		display: inline-block;
+		width: 35%;
+		height: auto;
+
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+
+	#blog #blog-content .cell header span.date {
+		margin: 0 0 0 0;
+		font-size: 0.875em;
+		border-radius: 0;
+	}
+
+
+	/* CONTENT */
+	#blog #blog-content .cell .post-content {
+		float: left;
+		display: inline-block;
+		/*position: absolute;*/
+		/*top: 50%;*/
+		padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+		width: 65%;
+		min-height: 100%;
+		font-size: 1em;
+
+		/*transform: translateY(-50%);*/
+	}
+
+	#blog #blog-content .cell .post-content h4 {
+		font-size: 1em;
+	}
+
+
+	/* META */
+	#blog #blog-content .cell .post-content .post-meta .post-author {
+		font-size: 0.875em;
+	}
+	
+
+	/* BUTTON */
+	#blog #blog-content .cell .post-content a.button {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin: 0 0 0 0;
+		font-size: 0.875em;
+		font-weight: normal;
+		text-align: right;
+		border: 0;
+	}
+
+	
+	/* DIVIDER */
+	#blog #blog-content .cell .post-content .divider {
+		display: none;
+	}
+
+}

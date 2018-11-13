@@ -1,0 +1,258 @@
+<!doctype html>
+
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+<title>--name | {{{ title }}}</title>
+<meta charset="utf-8">
+<!--<meta http-equiv="x-ua-compatible" content="ie=edge">-->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=yes, viewport-fit=cover">
+<link rel="canonical" href="--url{{ page }}">
+
+
+<!-- CORE -->
+<meta name="description" content="--description">
+
+
+<!--removeIf(removeBase)-->
+<!-- build:base -->
+<!-- endbuild -->
+<!--endRemoveIf(removeBase)-->
+
+
+<!-- GENERAL -->
+<!--<meta http-equiv="cleartype" content="on">-->
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<meta name="HandheldFriendly" content="--handheld-friendly">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="format-detection" content="telephone=no">
+<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+
+
+<!-- ICONS -->
+<link rel="icon" type="image/png" href="{{ root }}--favicon-16" sizes="16x16">
+<link rel="icon" type="image/png" href="{{ root }}--favicon-32" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ root }}--image-icon-180" sizes="180x180">
+<link rel="manifest" href="{{ root }}manifest.json">
+<link rel="mask-icon" href="{{ root }}--safari-pinned-tab" color="--theme">
+<meta name="apple-mobile-web-app-title" content="--name">
+<meta name="apple-mobile-web-app-capable" content="--web-app-capable">
+<meta name="application-name" content="--name">
+<meta name="msapplication-TileColor" content="--theme">
+<meta name="theme-color" content="--theme">
+
+
+<!-- FACEBOOK OPEN GRAPH -->
+<meta property="og:title" content="--name | {{{ title }}}">
+<meta property="og:description" content="--description">
+<meta property="og:locale" content="--og-locale"/>
+<meta property="og:type" content="--og-type"/>
+<meta property="og:image" content="{{ root }}--image-cover">
+<meta property="og:image:width" content="--og-image-width">
+<meta property="og:image:height" content="--og-image-height">
+<meta property="og:url" content="--url{{ page }}">
+
+
+<!-- TWITTER CARD -->
+<meta name="twitter:title" content="--name">
+<meta name="twitter:description" content="--description">
+<meta name="twitter:site" content="--twitter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="{{ root }}--image-profile">
+<meta name="twitter:image:alt" content="--url">
+
+
+<!-- APP BANNER -->
+<!--removeIf(removeAppBanner)-->
+<meta name="apple-itunes-app" content="app-id=--itunes-app-id">
+<meta name="google-play-app" content="app-id=--play-app-id">
+<!--endRemoveIf(removeAppBanner)-->
+
+
+
+
+
+<!--removeIf(removeSW)-->
+<script>
+
+	// Register a 'service worker' to precache the app's content. Visitors will be able to add the app to their device's homescreen and view the content offline.
+	if ("serviceWorker" in navigator) {
+
+		window.addEventListener("load", function() {
+			"use strict";
+
+			navigator.serviceWorker.register("sw.js").then(function(registration) {
+
+				console.log("Ver 1.2.2");
+				//console.log("ServiceWorker registration successful with scope: ", registration.scope);
+
+			});
+
+		});
+
+	}
+
+</script>
+<!--endRemoveIf(removeSW)-->
+
+
+
+
+
+<!-- build:vendor -->
+<!-- endbuild -->
+
+
+<!-- build:css -->
+<!-- endbuild -->	
+	
+	
+<!-- build:critical -->
+<!-- endbuild -->
+
+
+
+
+
+</head>
+
+<body>
+
+<!-- GLOBAL SVG GRADIENT -->
+<svg class="svg-global-gradient" width="0" height="0">
+	<defs>
+		<linearGradient id="svg-primary-gradient">
+			<stop offset="0" class="start-color"/>
+			<stop offset="1" class="end-color"/>
+		</linearGradient>
+	</defs>
+</svg>
+
+<svg class="svg-global-gradient" width="0" height="0">
+	<defs>
+		<linearGradient id="svg-secondary-gradient">
+			<stop offset="0" class="start-color"/>
+			<stop offset="1" class="end-color"/>
+		</linearGradient>
+	</defs>
+</svg>	
+
+<svg class="svg-global-gradient" width="0" height="0">
+	<defs>
+		<linearGradient id="svg-accent-gradient">
+			<stop offset="0" class="start-color"/>
+			<stop offset="1" class="end-color"/>
+		</linearGradient>
+	</defs>
+</svg>
+
+<svg class="svg-global-gradient" width="0" height="0">
+	<defs>
+	<linearGradient id="svg-wild-gradient">
+	  <stop offset="0" class="start-color"/>
+	  <stop offset="1" class="end-color"/>
+	</linearGradient>
+	</defs>
+</svg>
+<!-- // GLOBAL SVG GRADIENT -->
+
+
+<!-- PRELOADER -->
+<div id="preloader">
+
+    <ul>
+		
+		<!-- LOGO -->
+		<li>
+
+			<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+
+				<title>AXEL</title>
+				<rect width="200" height="200" style="fill:none"/><path d="M61.55,67.79h0A2.79,2.79,0,0,0,60.9,67l0,0a3.78,3.78,0,0,0-.33-.22l-.13-.09-.07,0-.24-.09-.2-.08-.3-.07-.24,0h-.54l-.22,0-.32.07-.18.07-.26.1-.06,0-.12.08a2.88,2.88,0,0,0-.34.23l0,0a2.79,2.79,0,0,0-.65.84h0L25.3,129.71a2.76,2.76,0,0,0,1.21,3.71,2.78,2.78,0,0,0,3.71-1.22L42,109H56.24a2.76,2.76,0,1,0,0-5.51H44.76L59.09,75.15,88,132.2a2.76,2.76,0,1,0,4.92-2.49Z" style="fill:#32e14b"/><path d="M129.12,82.64H99.46a2.76,2.76,0,0,0,0,5.52h29.66a2.76,2.76,0,0,0,0-5.52Z" style="fill:#32e14b"/><path d="M129.12,103.47H99.46a2.76,2.76,0,1,0,0,5.51h29.66a2.76,2.76,0,1,0,0-5.51Z" style="fill:#32e14b"/><path d="M129.12,128.19H99.46a2.76,2.76,0,1,0,0,5.52h29.66a2.76,2.76,0,0,0,0-5.52Z" style="fill:#32e14b"/><path d="M172.24,128.19h-26.9V85.4a2.76,2.76,0,1,0-5.52,0V131a2.77,2.77,0,0,0,2.76,2.76h29.66a2.76,2.76,0,0,0,0-5.52Z" style="fill:#32e14b"/><path d="M89.8,82.93a2.77,2.77,0,0,0-3.71,1.21L63,129.69a2.76,2.76,0,0,0,1.21,3.71,2.8,2.8,0,0,0,1.25.3A2.77,2.77,0,0,0,68,132.18L91,86.64A2.76,2.76,0,0,0,89.8,82.93Z" style="fill:#6400fa"/>
+
+			</svg>
+
+		</li>
+		<!-- // LOGO -->
+		
+    </ul>	
+
+</div>
+<!-- // PRELOADER -->
+
+
+
+
+
+<!-- JAVASCRIPT DISABLED MESSAGE -->
+<noscript>
+	
+	<!-- build:css -->
+	<!-- endbuild -->	
+
+	<div>
+		<img src="assets/error.gif" alt="Ooops"/>
+		<span>JavaScript is disabled on your browser</span>.<br>
+		It is required for this site to deliver a pleasant viewing experience. Please enable JavaScript to continue using this website.
+	</div>
+
+</noscript>
+<!-- // JAVASCRIPT DISABLE MESSAGE -->
+
+
+<!-- ERROR -->
+<div id="error">
+	<p>Please resize your window or rotate <span class="fa fa-repeat margin-lr-xs" aria-hidden="true"></span> your phone to portrait mode.</p>
+</div>
+<!-- // ERROR -->
+
+	
+
+
+
+<!-- CONTAINER -->
+<div id="container">
+
+	
+	
+	
+	
+	<!-- HERO -->
+	{{#ifpage 'index'}}
+		{{> hero}}
+	{{/ifpage}}
+	<!-- // HERO -->
+
+	
+	
+	
+	
+	<!-- CONTENT -->
+	{{> nav}}
+	{{> body}}
+	{{> footer}}
+	<!-- // CONTENT -->
+
+	
+	
+	
+	
+</div>
+<!-- // CONTAINER -->
+
+
+
+
+
+<!-- build:js -->
+<!-- endbuild -->	
+
+	
+	
+	
+
+
+
+
+</body>
+</html>

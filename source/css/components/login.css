@@ -1,0 +1,102 @@
+/* -------------------------------------------------- */
+/* LOGIN
+/* -------------------------------------------------- */
+
+/* PARENT */
+.login-button {
+	cursor: pointer;
+	overflow: hidden;
+	/*vertical-align: middle;*/
+	display: table;
+	position: relative;
+	/*margin-top: 0;*/
+	margin-left: auto;
+	margin-right: auto;
+	/*margin-bottom: 0;*/
+	padding: 0 0 0 0;
+	width: 250px;
+	height: 45px;
+	/*min-height: 100%;*/
+	/*color: inherit;*/
+	font-size: 1em;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	border-radius: 3px;
+	background-color: inherit;
+
+	transition: var(--ease-default);
+	/*transition: all 0.5s cubic-bezier(0.680, -0.55, 0.265, 1.55);*/
+
+	user-select: none;
+
+	-webkit-appearance: none;
+}
+
+
+/* IMAGE */
+.login-button img {
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0.525rem 1rem 0 1rem;
+	width: 25px;
+	height: 100%;
+	max-height: 25px;
+	text-align: center;
+}
+
+
+/* -------------------------------------------------- */
+/* GOOGLE
+/* -------------------------------------------------- */
+
+.login-button.google {
+	border: 1px solid #4285f4;
+	background-color: var(--white-color);
+	box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.25);
+}
+
+.login-button.google:hover {
+	box-shadow: 1px 2px 4px 0px rgba(0,0,0,0.25);
+}
+
+
+/* COPY */
+.login-button.google span {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 0.75rem 0 0.75rem;
+	color: var(--white-color);
+	background-color: #4285f4;
+}
+
+
+/* -------------------------------------------------- */
+/* FACEBOOK
+/* -------------------------------------------------- */
+
+.login-button.facebook {
+	border: 1px solid #4267b2;
+	background-color: var(--white-color);
+	box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.25);
+}
+
+.login-button.facebook:hover {
+	box-shadow: 1px 2px 4px 0px rgba(0,0,0,0.25);
+}
+
+
+/* COPY */
+.login-button.facebook span {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 0.75rem 0 0.75rem;
+	color: var(--white-color);
+	background-color: #4267b2;
+}
+
+.login-button.facebook span.fa {
+	font-size: 1.75em !important;
+}

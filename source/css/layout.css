@@ -1,0 +1,235 @@
+/* -------------------------------------------------- */
+/* LAYOUT
+/* -------------------------------------------------- */
+
+/* Foundation XY Grid Defaults.
+.grid-x
+.grid-margin-x
+.grid-margin-y
+.grid-padding-x
+.grid-padding-y
+*/
+
+
+/* -------------------------------------------------- */
+/* SECTION / ARTICLE (BLOCK LEVEL ELEMENT)
+/* -------------------------------------------------- */
+
+/* MARGINS */
+main section:not(.margin-none) {
+	margin: var(--section-margin);
+}
+
+
+/* PADDING */
+main section:not(.padding-none) {
+	padding:  var(--section-padding);
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 414px) {
+
+	/* MARGINS */
+	main section:not(.margin-none) {
+		margin: var(--section-margin-mobile);
+	}
+
+
+	/* PADDING */
+	main section:not(.padding-none) {
+		padding: var(--section-padding-mobile);
+	}
+
+}
+
+
+/* -------------------------------------------------- */
+/* GRID CELL
+/* -------------------------------------------------- */
+
+/* X */
+.grid-x.grid-padding-x > .cell:not(.padding-none) {
+	padding-top: var(--cell-padding-top);
+	padding-left: var(--cell-padding-left);
+	padding-bottom: var(--cell-padding-bottom);
+	padding-right: var(--cell-padding-right);
+}
+
+
+/* Y */
+.grid-y.grid-padding-y > .cell:not(.padding-none) {
+	padding-top: var(--cell-padding-top);
+	padding-bottom: var(--cell-padding-bottom);
+}
+
+
+/* HELPERS */
+.grid-x > .cell.padding-top-none {
+	padding-top: 0 !important;
+}
+
+.grid-x > .cell.padding-left-none {
+	padding-left: 0 !important;
+}
+
+.grid-x > .cell.padding-bottom-none {
+	padding-bottom: 0 !important;
+}
+
+.grid-x > .cell.padding-right-none {
+	padding-right: 0 !important;
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 414px) {
+
+	/* X */
+	.grid-x.grid-padding-x > .cell:not(.padding-none) {
+		padding-top: var(--cell-padding-top-mobile);
+		padding-left: var(--cell-padding-left-mobile);
+		padding-bottom: var(--cell-padding-bottom-mobile);
+		padding-right: var(--cell-padding-right-mobile);
+	}
+
+
+	/* Y */
+	.grid-y.grid-padding-y > .cell:not(.padding-none) {
+		padding-top: var(--cell-padding-top-mobile);
+		padding-bottom: var(--cell-padding-bottom-mobile);
+	}
+
+}
+
+
+/* -------------------------------------------------- */
+/* AUTO
+/* -------------------------------------------------- */
+
+/* PARENT */
+.padding-auto {
+	margin-top: var(--margin-top-auto);
+	margin-left: var(--margin-left-auto);
+	margin-bottom: var(--margin-bottom-auto);
+	margin-right: var(--margin-right-auto);
+
+	padding-top: var(--padding-top-auto);
+	padding-left: var(--padding-left-auto);
+	padding-bottom: var(--padding-bottom-auto);
+	padding-right: var(--padding-right-auto);
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 414px) {
+
+	.padding-auto {
+		margin-top: var(--margin-top-auto-mobile);
+		margin-left: var(--margin-left-auto-mobile);
+		margin-bottom: var(--margin-bottom-auto-mobile);
+		margin-right: var(--margin-right-auto-mobile);
+
+		padding-top: var(--padding-top-auto-mobile);
+		padding-left: var(--padding-left-auto-mobile);
+		padding-bottom: var(--padding-bottom-auto-mobile);
+		padding-right: var(--padding-right-auto-mobile);
+	}
+
+}
+
+
+/* -------------------------------------------------- */
+/* TEXT BLOCK
+/* -------------------------------------------------- */
+
+.text-container {
+	display: block;
+	position: relative;
+	width: 100%;
+	min-height: 50%;
+}
+
+
+/* -------------------------------------------------- */
+/* BUTTON GROUP
+/* -------------------------------------------------- */
+
+/* PARENT */
+.button-group {
+
+}
+
+
+/* CHILD */
+.button-group .button {
+	margin: 0.5rem;
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 639px) {
+
+	/* CHILD */
+	.button-group .button {
+		margin: 1rem auto 1rem auto;
+	}
+
+	.button-group[class*='button-width-'] {
+		min-width: 100% !important;
+	} 
+
+}
+
+
+/* -------------------------------------------------- */
+/* MEDIA OBJECT SECTION
+/* -------------------------------------------------- */
+
+
+/* PARENT */
+.media-object-section {
+	padding-bottom: 0 !important;
+}
+
+.media-object-section.right {
+	text-align: right;
+}
+
+
+/* CHILD */
+/*
+.media-object-section.right:first-child {
+	padding-left: 1rem;
+	padding-right: 0;
+}
+*/
+
+.media-object-section.right:first-child + .media-object-section  {
+	text-align: right;
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 639px) {
+
+	/* PARENT */
+	.media-object-section.right {
+		text-align: left;
+	}
+
+
+	.media-object-section.right:first-child + .media-object-section  {
+		text-align: left;
+	}
+
+}
+
+
+/* -------------------------------------------------- */
+/* IMAGE STYLES
+/* -------------------------------------------------- */
+
+svg.top-offset {
+	filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.25));
+}

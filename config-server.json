@@ -1,0 +1,53 @@
+{
+	"aws": {
+		"upload": false,
+		"dist": [
+			"./test"
+		],
+		"region": "us-west-1",
+		"bucket": "your.bucket.com",
+		"accessKeyId": "",
+		"secretAccessKey": "",
+		"cachecontrol": "max-age=315360000, no-transform, public",
+		"cache": false,
+		"sync": true,
+		"gzip": true,
+		"signatureVersion": "v3",
+		"confirm": true
+	},
+	"git": {
+		"upload": true,
+		"dist": [
+			"./test"
+		],
+		"promise": "github.com/UserName/your-repo",
+		"repo": "https://github.com/UserName/your-repo.git",
+		"origin": "origin",
+		"branch": "master",
+		"user": "username",
+		"password": "password",
+		"message": [
+			"Initial commit."
+		],
+		"timeOffset": 1000,
+		"quiet": false,
+		"confirm": true
+	},
+	"ftp": {
+		"upload": false,
+		"dist": [
+			"./test"
+		],
+		"host": "",
+		"path": "dev/build",
+		"user": "username",
+		"password": "password",
+		"secure": false,
+		"parallel": 10,
+		"maxConnections": 5,
+		"timeOffset": 0,
+		"idleTimeout": 100,
+		"reload": true,
+		"confirm": true
+	}
+}

@@ -1,0 +1,35 @@
+/* -------------------------------------------------- */
+/* GLOW
+/* -------------------------------------------------- */
+
+/* COMMON */
+.text-fx-glow,
+.text-fx-glow-hover:hover {
+	animation: animTextColor 2s ease-in-out 1s infinite;
+}
+
+
+/* ANIMATION */
+@keyframes animGlow {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes animTextColor {
+	0% {
+		color: var(--secondary-color);
+	}
+	50% {
+		color: var(--primary-color);
+	}
+	100% {
+		color: var(--accent-color);
+	}
+}

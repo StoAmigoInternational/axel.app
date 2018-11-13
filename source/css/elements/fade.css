@@ -1,0 +1,68 @@
+/* -------------------------------------------------- */
+/* FADE
+/* -------------------------------------------------- */
+
+/* COMMON */
+.fade-top::before,
+.fade-bottom::after,
+
+.fade-left::before,
+.fade-right::after,
+
+.fade-lr::before,
+.fade-lr::after {
+	content: '';
+	z-index: 1;
+	pointer-events: none;
+	position: absolute;
+}
+
+
+/* TOP / BOTTOM */
+.fade-top::before,
+.fade-bottom:after {
+	width: 100%;
+}
+
+.fade-top::before {
+	top: 0;
+	height: 12%;
+	background: rgba(0,0,0,0);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+
+}
+
+.fade-bottom::after {
+	bottom: 0;
+	height: 12%;
+	background: rgba(0,0,0,0);
+	background: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 100%);
+}
+
+
+/* LEFT / RIGHT */
+.fade-left::before,
+.fade-right::after,
+
+.fade-lr::before,
+.fade-lr::after {
+	bottom: 0;
+	width: 10%;
+	height: 100%;
+}
+
+.fade-left::before,
+.fade-lr::before {
+	left: 0;
+
+	background-color: rgba(255,255,255,0);
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.fade-right::after,
+.fade-lr::after {
+	right: 0;
+
+	background-color: rgba(255,255,255,0);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}

@@ -1,0 +1,172 @@
+stages:
+  - build
+  ###- cleanup
+  - deploy
+
+
+## Build template 
+.build_template: &build_template
+  stage: build
+  image: docker.zencoo.com:5000/docreg/axelapp:0.3
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - echo "Building..."
+    - npm install
+    - gulp build
+  artifacts:
+    name: ${CI_COMMIT_REF_SLUG}-${CI_JOB_ID}-${CI_JOB_NAME}
+    paths:
+      - build/
+    expire_in: 1 week
+    
+.deploy_script_template: &deploy_template
+  script:
+    - rm -f ${SITELINK}
+    - rm -f ${SITELINK2}
+    - echo "${CI_PROJECT_DIR}/build"
+    - chmod -R +w "${SITEDIR}"
+    - rm -fr "${SITEDIR}"
+    - mv ${CI_PROJECT_DIR}/build ${SITEDIR}
+    - ln -s ${SITEDIR} ${SITELINK}
+    - ln -s ${SITEDIR} ${SITELINK2}
+    - rm -f ${SITEDIR}/{tackapp,tackstats,blog} 
+    - ln -s ${TACKAPP_BIN} ${SITEDIR}/tackapp
+    - ln -s ${TACKAPP_STATS} ${SITEDIR}/tackstats
+    - ln -s ${BLOG_FOLDER} ${SITEDIR}/blog
+    - cd ${SITELINK}; find . -type d -exec chmod 0755 {} \;
+    - find . -type f -exec chmod 0644 {} \;
+
+## deploy_prerelease (ww2.axel.org)
+## For 'rc' branch only (for test on hotel).
+build_rc:
+  <<: *build_template
+  only:
+  - master
+  - test
+  tags:
+  - www_axel_rc_build
+
+#clean_rc:
+#  stage: cleanup
+#  script: 
+#    - rm -rf "${CI_PROJECT_DIR}"
+
+deploy_rc:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+    SITELINK: /data/websites/ww2_axel_org/site
+    SITELINK2: /data/websites/ww2_axel_org/site2
+    TACKAPP_BIN: /home/websites/pinapp/tackapp
+    TACKAPP_STATS: /home/websites/pinapp/tackstats
+    BLOG_FOLDER: /home/websites/www_axel_org_blog
+    SITEDIR: /data/websites/deployed_axel_org/webfolder
+    #CI_DEBUG_TRACE: "true"
+
+
+  <<: *deploy_template
+
+  dependencies:
+    - build_rc
+  tags:
+    - www_axel_rc_deploy
+
+  environment:
+    name: prerelease
+    url: https://ww2.axel.org
+
+  only:
+  - master
+  - test
+
+## For 'ci' branch only.
+build_test:
+  <<: *build_template
+  only:
+  - ci
+
+  tags:
+  - www_axel_test_build
+
+  
+deploy_test:
+  stage: deploy
+
+  variables:
+    GIT_STRATEGY: none
+    SITELINK: /data/websites/www_stoamigo_com
+    SITELINK2: /data/websites/www_axel_org
+    TACKAPP_BIN: /home/websites/pinapp/tackapp
+    TACKAPP_STATS: /home/websites/pinapp/tackstats
+    BLOG_FOLDER: /home/websites/www_axel_org_blog
+    SITEDIR: /data/websites/ww3_axel_org
+
+  <<: *deploy_template
+
+  dependencies:
+    - build_test
+
+  tags:
+  - www_axel_test_deploy
+
+  environment:
+    name: test_env
+    url: https://ww3.axel.org
+
+  only:
+  - ci
+
+
+#### Production deploy.
+deploy_prod:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+    SITELINK: /data/websites/www_stoamigo_com
+    SITELINK2: /data/websites/www_axel_org
+    TACKAPP_BIN: /home/websites/pinapp/tackapp
+    TACKAPP_STATS: /home/websites/pinapp/tackstats
+    BLOG_FOLDER: /home/websites/www_axel_org_blog
+    SITEDIR: /data/websites/production_axel_org/webfolder
+  <<: *deploy_template
+
+  dependencies:
+    - build_rc
+
+  environment:
+    name: production
+    url: https://www.axel.org
+  only:
+  - master
+
+  tags:
+  - www_axel_org_production
+  when: manual
+
+
+#### Production deploy.
+deploy_rc2:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+    SITELINK: /data/websites/rc2_www_stoamigo_com
+    SITELINK2: /data/websites/rc2_www_axel_org
+    TACKAPP_BIN: /home/websites/pinapp/tackapp
+    TACKAPP_STATS: /home/websites/pinapp/tackstats
+    BLOG_FOLDER: /home/websites/www_axel_org_blog
+    SITEDIR: /data/websites/deployed_rc2_axel_org/webfolder
+  <<: *deploy_template
+
+  dependencies:
+    - build_rc
+
+  environment:
+    name: rc2
+    url: https://rc2.axel.org
+  only:
+  - rc2
+  tags:
+  - www_axel_org_production
+  when: manual

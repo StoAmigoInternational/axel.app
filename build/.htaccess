@@ -1,0 +1,337 @@
+
+RewriteEngine on
+
+
+
+
+
+# Declare index file
+#DirectoryIndex index.html index.php
+
+
+
+
+
+# Only allow my site to frame itself
+Header always set X-Frame-Options SAMEORIGIN
+
+
+
+
+
+# Disable unsafe inline/eval, only allow loading of resources (images, fonts, scripts, etc.) over https
+# Note that this does not provide any XSS protection
+Header set Content-Security-Policy: script-src www.google-analytics.com 'unsafe-inline'; script-src apis.google.com ajax.googleapis.com 'self'; style-src fonts.googleapis.com 'self' 'unsafe-inline';
+	
+
+
+
+
+
+# If loading from a CDN
+#Header set Content-Security-Policy: default-src https://cdn.example.net; child-src 'none'; object-src 'none'
+
+
+
+
+
+# Enable for GoDaddy
+#Options +MultiViews
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+
+
+
+
+# Strip .html extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.html
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
+
+
+
+
+
+# Block access to directories
+<IfModule mod_autoindex.c>
+	Options -Indexes
+</IfModule>
+
+
+
+
+
+# Block access to all hidden files (with exception)
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
+	RewriteCond %{SCRIPT_FILENAME} -d [OR]
+	RewriteCond %{SCRIPT_FILENAME} -f
+	RewriteRule "(^|/)\." - [F]
+</IfModule>
+
+
+
+
+
+# Block access to files
+<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|psd|sh|sql|sw[op])|~)$">
+
+	# Apache < 2.3
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+		Satisfy All
+	</IfModule>
+
+	# Apache ≥ 2.3
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+
+</FilesMatch>
+
+
+
+
+
+# Prevent MIME type sniffing
+<IfModule mod_headers.c>
+	Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+
+
+
+<IfModule mod_headers.c>
+
+	Header set X-XSS-Protection "1; mode=block"
+
+	# 'mod_headers' cannot match based on the content-type, however,
+	# the 'X-XSS-Protection' response header should be send only for
+	# HTML documents and not for the other resources.
+
+	<FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+		Header unset X-XSS-Protection
+	</FilesMatch>
+
+</IfModule>
+
+
+
+
+
+# HTTP Strict Transport Security (HSTS)
+<IfModule mod_headers.c>
+	Header always set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+</IfModule>
+
+
+
+
+
+# File header cache
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/gif "access plus 1 month"
+	ExpiresByType image/jpg "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/png "access plus 1 month"
+	ExpiresByType image/svg+xml "access plus 1 month"
+	ExpiresByType image/x-icon "access plus 1 month"
+	ExpiresByType text/html "access 1 month"
+	ExpiresByType text/css "access 1 month"
+	ExpiresByType text/x-javascript "access 1 month"
+	ExpiresByType application/pdf "access 1 month"
+	ExpiresDefault "access 1 month"
+</IfModule>
+
+
+
+
+
+# Testing
+<IfModule mod_deflate.c>
+
+	#The following line is enough for .js and .css
+	AddOutputFilter DEFLATE js css
+
+	#The following line also enables compression by file content type, for the following list of Content-Type:s
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml
+
+	#The following lines are to avoid bugs with some browsers
+	BrowserMatch ^Mozilla/4 gzip-only-text/html
+	BrowserMatch ^Mozilla/4\.0[678] no-gzip
+	BrowserMatch \bMSIE !no-gzip !gzip-only-text/html 
+	
+</IfModule>
+
+<IfModule mod_headers.c>
+	<FilesMatch "\.(js|css|xml|gz)$">
+		Header append Vary: Accept-Encoding
+	</FilesMatch>
+</IfModule>
+
+
+
+
+
+# Enable compression
+<IfModule mod_deflate.c>
+
+    # Force compression for mangled `Accept-Encoding` request headers
+    # https://developer.yahoo.com/blogs/ydn/pushing-beyond-gzipping-25601.html
+
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Compress all output labeled with one of the following media types.
+    #
+    # (!) For Apache versions below version 2.3.7 you don't need to
+    # enable `mod_filter` and can remove the `<IfModule mod_filter.c>`
+    # and `</IfModule>` lines as `AddOutputFilterByType` is still in
+    # the core directives.
+    #
+    # https://httpd.apache.org/docs/current/mod/mod_filter.html#addoutputfilterbytype
+
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE "application/atom+xml" \
+                                      "application/javascript" \
+                                      "application/json" \
+                                      "application/ld+json" \
+                                      "application/manifest+json" \
+                                      "application/rdf+xml" \
+                                      "application/rss+xml" \
+                                      "application/schema+json" \
+                                      "application/vnd.geo+json" \
+                                      "application/vnd.ms-fontobject" \
+                                      "application/x-font-ttf" \
+                                      "application/x-javascript" \
+                                      "application/x-web-app-manifest+json" \
+                                      "application/xhtml+xml" \
+                                      "application/xml" \
+                                      "font/collection" \
+                                      "font/eot" \
+                                      "font/opentype" \
+                                      "font/otf" \
+                                      "font/ttf" \
+                                      "image/bmp" \
+                                      "image/svg+xml" \
+                                      "image/vnd.microsoft.icon" \
+                                      "image/x-icon" \
+                                      "text/cache-manifest" \
+                                      "text/calendar" \
+                                      "text/css" \
+                                      "text/html" \
+                                      "text/javascript" \
+                                      "text/plain" \
+                                      "text/markdown" \
+                                      "text/vcard" \
+                                      "text/vnd.rim.location.xloc" \
+                                      "text/vtt" \
+                                      "text/x-component" \
+                                      "text/x-cross-domain-policy" \
+                                      "text/xml"
+
+    </IfModule>
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Map the following filename extensions to the specified
+    # encoding type in order to make Apache serve the file types
+    # with the appropriate `Content-Encoding` response header
+    # (do note that this will NOT make Apache compress them!).
+    #
+    # If these files types would be served without an appropriate
+    # `Content-Enable` response header, client applications (e.g.:
+    # browsers) wouldn't know that they first need to uncompress
+    # the response, and thus, wouldn't be able to understand the
+    # content.
+    #
+    # https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding
+
+    <IfModule mod_mime.c>
+        AddEncoding gzip              svgz
+    </IfModule>
+
+</IfModule>
+
+
+
+
+
+# One year for image files
+<FilesMatch "\.(jpg|jpeg|png|gif|ico|svg)$">
+	Header set Cache-Control "public, proxy-revalidate, max-age=1928448000"
+</FilesMatch>
+
+
+<FilesMatch "\.(html|htm|js|css|pdf)$">
+  FileETag None
+  <ifModule mod_headers.c>
+     Header unset ETag
+     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+     Header set Pragma "no-cache"
+     Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+  </ifModule>
+</FilesMatch>
+
+
+# One month for css and js
+#<filesMatch ".(css|js)$">
+#	Header set Cache-Control "max-age=2628000, public"
+#</filesMatch>
+
+
+<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+  Header unset Cache-Control
+</FilesMatch>
+
+
+# Expires is set to a point we won't reach
+# Cache control will trigger first, 10 days after access
+# 10 Days = 60s x 60m x 24hrs x 10days =  864,000
+<FilesMatch "\.(webm|ogg|mp4)$">
+	Header set Expires "Mon, 27 Mar 2038 13:33:37 GMT"
+	Header set Cache-Control "max-age=864000"
+</FilesMatch>
+
+AddType video/webm .webm
+
+
+
+
+
+# Remove 'ETags' as resources are sent with far-future expires headers
+# https://developer.yahoo.com/performance/rules.html#etags
+# https://tools.ietf.org/html/rfc7232#section-2.3
+
+# 'FileETag None' doesn't work in all cases
+<IfModule mod_headers.c>
+	Header unset ETag
+</IfModule>
+
+FileETag None
+
+
+
+
+
+# Declare error documents
+#ErrorDocument 300 https://stoamigo.com/error
+#ErrorDocument 403 https://stoamigo.com/error
+#ErrorDocument 404 https://stoamigo.com/error
+#ErrorDocument 500 https://stoamigo.com/error

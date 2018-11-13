@@ -1,0 +1,78 @@
+/* -------------------------------------------------- */
+/* TIP / POINTER
+/* -------------------------------------------------- */
+
+/* COMMON */
+.tip-top,
+.tip-bottom,
+.tip-left,
+.tip-right {
+	position: relative;
+}
+
+.tip-top::after,
+.tip-bottom::after,
+.tip-left::after,
+.tip-right::after {
+	content: '';
+	z-index: 1;
+	cursor: default;
+	pointer-events: none;
+	position: absolute;
+	margin-right: auto;
+	width: 35px;
+	height: 35px;
+	border-radius: 4px;
+	background-color: inherit;
+}
+
+
+/* VARIANTS */
+.tip-top::after {
+	top: -1em;
+	left: 50%;
+
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.tip-bottom::after {
+	bottom: -1em;
+	left: 50%;
+
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.tip-left::after {
+	left: -1em;
+	top: 50%;
+
+	transform: translateY(-50%) rotate(45deg);
+}
+
+.tip-right::after {
+	right: -1em;
+	top: 50%;
+
+	transform: translateY(-50%) rotate(45deg);
+}
+
+
+/* RESPONSIVE */
+@media only screen and (min-width: 0) and (max-width: 639px) {
+
+	/* VARIANTS */
+	.tip-left::after {
+		top: -1em;
+		left: 50%;
+
+		transform: translateX(-50%) rotate(45deg);
+	}
+
+	.tip-right::after {
+		bottom: -1em;
+		left: 50%;
+
+		transform: translateX(-50%) rotate(45deg);
+	}
+
+}

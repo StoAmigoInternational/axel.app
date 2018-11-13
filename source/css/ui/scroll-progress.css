@@ -1,0 +1,28 @@
+/* -------------------------------------------------- */
+/* SCROLL PROGRESS
+/* -------------------------------------------------- */
+
+/* PARENT */
+.scroll-progress {
+	z-index: auto;
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 2px;
+
+	transition: width 0.2s ease-out;
+
+	will-change: width;
+}
+
+
+/* HELPERS */
+.scroll-progress.top {
+	top: 0;
+}
+
+.scroll-progress.bottom {
+	bottom: 0;
+}

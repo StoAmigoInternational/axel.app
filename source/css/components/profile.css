@@ -1,0 +1,182 @@
+/* -------------------------------------------------- */
+/* PROFILES / TEAM MEMBERS
+/* -------------------------------------------------- */
+
+/* PARENT */
+.profiles {
+
+}
+
+
+/* -------------------------------------------------- */
+/* PROFILE / USER
+/* -------------------------------------------------- */
+
+/* ITEM */
+.profile-user {
+	overflow: hidden;
+	position: relative;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	height: auto;
+
+	/*transition: all 0.25s cubic-bezier(0.680, -0.55, 0.265, 1.55);*/
+}
+
+
+/* PHOTO */
+.profiles .profile-user .profile-small-photo {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+/* INFO */
+.profiles .profile-user ul.profile-info {
+	z-index: 2;
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	width: 100%;
+}
+
+.profiles .profile-user ul.profile-info li.name,
+.profiles .profile-user ul.profile-info li.position {
+	float: left;
+	display: inline-block;
+	padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+	width: 50%;
+	font-size: 0.75em;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.profiles .profile-user ul.profile-info li.name {
+	color: var(--primary-color);
+	background-color: var(--charcoal-color);
+}
+
+.profiles .profile-user ul.profile-info li.position {
+	color: var(--white-color);
+	background-color: rgba(50,50,50,0.75);
+}
+
+
+/* ACTIVE */
+.profile-user.active {
+	pointer-events: none;
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 639px) {
+
+	/* INFO */
+	.profiles .profile-user ul.profile-info li.name {
+		width: 100%;
+		text-align: center;
+		background-color: rgba(50,50,50,0.75);
+	}
+
+	.profiles .profile-user ul.profile-info li.position {
+		display: none;
+	}
+
+}
+
+
+/* -------------------------------------------------- */
+/* BIO
+/* -------------------------------------------------- */
+
+/* PARENT */
+.profile-bio {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: var(--white-color);
+}
+
+
+/* PHOTO */
+.profile-bio .profile-large-photo {
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+	background-color: transparent;
+	background-image: url(../assets/backgrounds/pattern-pixel-transparent.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	transform-origin: center;
+}
+
+
+/* COPY */
+.profile-bio .text-container {
+	overflow: hidden;
+	position: relative;
+	/*padding: 2.5rem 1.5rem 2.5rem 1.5rem;*/
+	height: auto;
+	background-color: var(--white-color);
+}
+
+.profile-bio .text-container h2,
+.profile-bio .text-container h3,
+.profile-bio .text-container p {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 639px) {
+
+	/* PHOTO */
+	.profile-bio .profile-large-photo {
+		/*position: relative;*/
+		height: 450px;
+		background-position: center center;
+
+	}
+
+
+	/* COPY */
+	.profile-bio .text-container {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		/*
+		position: absolute;
+		top: 250px;
+		padding-top: 2rem;
+		padding-bottom: 0;
+		*/
+	}
+
+	.profile-bio .text-container h2,
+	.profile-bio .text-container h3,
+	.profile-bio .text-container p {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.profile-bio .text-container p {
+		padding-bottom: 4rem;
+	}
+
+
+	/* HELPERS */
+	.profile-bio.align-middle {
+		align-items: stretch;
+	}
+
+}
